@@ -1,4 +1,4 @@
-const _PROJECTNAME = 'base';
+const _PROJECTNAME = 'conquista';
 
 var gulp = require('gulp'),
 	concat = require('gulp-concat'),
@@ -30,7 +30,7 @@ var gulp = require('gulp'),
  * http://www.imagemagick.org/script/binary-releases.php
  * */
 
-const tinypngToken = false;
+const tinypngToken = '9AezpuHVVLlWna8fZg5pxCJFCN7fKdzv';
 
 // Source Content structure
 
