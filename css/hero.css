@@ -1,0 +1,14 @@
+
+/* Hero */
+
+.Hero {
+	background: rgba(33,149,243,1);
+	background: -moz-linear-gradient(left, rgba(33,149,243,1) 0%, rgba(220,231,117,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(33,149,243,1)), color-stop(100%, rgba(220,231,117,1)));
+	background: -webkit-linear-gradient(left, rgba(33,149,243,1) 0%, rgba(220,231,117,1) 100%);
+	background: -o-linear-gradient(left, rgba(33,149,243,1) 0%, rgba(220,231,117,1) 100%);
+	background: -ms-linear-gradient(left, rgba(33,149,243,1) 0%, rgba(220,231,117,1) 100%);
+	background: linear-gradient(to right, rgba(33,149,243,1) 0%, rgba(220,231,117,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2195f3', endColorstr='#dce775', GradientType=1 );
+	display: block;
+}

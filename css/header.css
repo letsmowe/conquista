@@ -1,0 +1,44 @@
+
+/* Header */
+
+.Header {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	height: 6em;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+
+.Header-inner {
+	-webkit-align-items: center;
+	align-items: center;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 1em;
+	width: 100%;
+}
+
+@media (min-width: 48em) {
+
+	.Header {
+		height: 8em;
+	}
+
+	.Header-inner {
+		max-width: 96em;
+	}
+
+}

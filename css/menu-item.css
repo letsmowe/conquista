@@ -1,0 +1,58 @@
+
+/* Menu Item */
+
+.MenuItem {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+/* Menu Item select area */
+
+.MenuItem-select-area {
+	color: #ffffff;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	padding: 1em;
+}
+
+.MenuItem-select-area:hover {
+	background-color: rgba(255,255,255,0);
+	color: #80d8ff;
+}
+
+.Menu--social .MenuItem-select-area:hover {
+	background-color: rgba(255,255,255,1);
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+.Menu--social .MenuItem:first-of-type .MenuItem-select-area {
+	/*padding: 0 1em 1em;*/
+}
+
+@media (min-width: 48em) {
+
+	.MenuItem-text {
+		font-size: 1.125em;
+	}
+
+}
+
+@media (min-width: 72em) {
+
+	.MenuItem-text {
+		font-size: 1.3125em;
+	}
+
+}

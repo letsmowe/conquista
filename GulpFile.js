@@ -40,12 +40,12 @@ var source = {
 };
 
 source.css = {
-	content: '*.css',
+	content: '**/*.css',
 	location: source.location + 'css/'
 };
 
 source.js = {
-	content: '*.js',
+	content: '**/*.js',
 	location: source.location + 'js/'
 };
 
@@ -152,8 +152,8 @@ gulp.task('serve', function () {
 		}
 	});
 
-	gulp.watch([source.css.location + source.css.content], ['css-watch']);
-	gulp.watch([source.js.location + source.js.content], ['js-watch']);
+	gulp.watch(['css/*.css'], ['css-watch']);
+	gulp.watch([['js/*.js']], ['js-watch']);
 	gulp.watch(source.index.content).on("change", browserSync.reload);
 
 });

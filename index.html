@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="open-sans">
 <meta charset="UTF-8">
 <title>Bebidas Conquista</title>
 <meta name="viewport"
@@ -14,11 +14,124 @@
 <script src="dist/js/classList.min.js"></script>
 <![endif]-->
 
+<style>
+
+	body {
+		height: 100vh;
+	}
+
+	main {
+		-webkit-align-items: center;
+		align-items: center;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-flex-flow: column;
+		flex-flow: column;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.LinkOption {
+		-webkit-align-items: center;
+		align-items: center;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		height: 50%;
+		-webkit-flex-flow: column;
+		flex-flow: column;
+		-webkit-justify-content: center;
+		justify-content: center;
+		min-width: 24em;
+		position: relative;
+		opacity: .8;
+		text-align: center;
+		width: 100%;
+	}
+
+	.LinkOption:hover {
+		opacity: 1;
+		-webkit-transform: scale(1.1);
+		-moz-transform: scale(1.1);
+		-ms-transform: scale(1.1);
+		-o-transform: scale(1.1);
+		transform: scale(1.1);
+		z-index: 1;
+	}
+
+	.LinkOption-title {
+		color: #ffffff;
+		font-size: 3em;
+	}
+
+	.LinkOption-description {
+		color: #e0e0e0;
+		font-size: 1em;
+	}
+
+	@media (min-width: 48em) {
+
+		.LinkOption-description {
+			font-size: 1.3125em;
+		}
+
+	}
+
+	@media (min-width: 60em) {
+
+		main {
+			-webkit-flex-flow: row;
+			flex-flow: row;
+		}
+
+		.LinkOption {
+			height: 100%;
+		}
+
+		.LinkOption-title {
+			color: #ffffff;
+			font-size: 4.5em;
+		}
+
+	}
+
+	@media (min-width: 72em) {
+
+		.LinkOption-title {
+			font-size: 6em;
+		}
+
+	}
+
+
+</style>
+
 <body>
 
-<header></header>
+<main>
 
-<main></main>
+	<a href="vertical/" class="LinkOption blue">
+
+		<span class="LinkOption-title">Vertical</span>
+		<span class="LinkOption-description">clique aqui para visualizar o protótipo Vertical</span>
+
+	</a>
+
+	<a href="horizontal/" class="LinkOption blue-600">
+
+		<span class="LinkOption-title">Horizontal</span>
+		<span class="LinkOption-description">clique aqui para visualizar o protótipo Horizontal</span>
+
+	</a>
+
+</main>
 
 </body>
 
