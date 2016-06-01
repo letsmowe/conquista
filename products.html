@@ -39,16 +39,6 @@
 	}
 
 	.ProductList {
-		position: relative;
-	}
-
-	.ProductList-background {
-		left: 0;
-		top: 0;
-		position: absolute;
-	}
-
-	.ProductList-inner {
 		display: -webkit-box;
 		display: -moz-box;
 		display: -ms-flexbox;
@@ -56,19 +46,18 @@
 		display: flex;
 		-webkit-flex-flow: row wrap;
 		flex-flow: row wrap;
-		height: 100vh;
 	}
 
-	.ProductItem {
+	.ProductListItem {
 		flex: 1 1 auto;
 		height: 50vh;
 		min-width: 100%;
 		position: relative;
 	}
 
-	.ProductItem-background,
-	.ProductItem-product,
-	.ProductItem-target {
+	.ProductListItem-background,
+	.ProductListItem-product,
+	.ProductListItem-target {
 		background-position: center;
 		height: 100%;
 		left: 0;
@@ -77,23 +66,28 @@
 		width: 100%;
 	}
 
-	.ProductItem-background {
+	.ProductListItem-background {
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
 	}
 
-	.ProductItem-product,
-	.ProductItem-target {
-		-webkit-background-size: 24em;
-		background-size: 24em;
+	.ProductListItem-product {
 		background-repeat: no-repeat;
+		-webkit-background-size: 20%;
+		background-size: 20%;
+	}
+
+	.ProductListItem-target {
+		background-repeat: no-repeat;
+		-webkit-background-size: 40%;
+		background-size: 40%;
 	}
 
 	@media (min-width: 36em) {
 
-		.ProductItem {
+		.ProductListItem {
 			width: 50%;
 			min-width: 0;
 		}
@@ -115,7 +109,7 @@
 			padding: 0 3em;
 		}
 
-		.ProductItem {
+		.ProductListItem {
 			width: 33.3333333333%;
 		}
 
@@ -129,53 +123,64 @@
 
 	<section class="Products">
 
-		<div class="ProductList">
+		<nav class="ProductList">
 
-			<div class="ProductList-background"></div>
+			<div class="ProductListItem red-100">
 
-			<div class="ProductList-inner">
-
-				<div class="ProductItem red-100">
-
-					<div class="ProductItem-background" style="background-image: url('img/Guarana_bg.png')"></div>
-					<div class="ProductItem-target" style="background-image: url('img/Guarana_target.png')"></div>
-					<div class="ProductItem-product" style="background-image: url('img/Guarana.png')"></div>
-
-				</div>
-
-				<div class="ProductItem red-200">
-
-
-
-				</div>
-
-				<div class="ProductItem red-300">
-
-
-
-				</div>
-
-				<div class="ProductItem blue-100">
-
-
-
-				</div>
-
-				<div class="ProductItem blue-200">
-
-
-
-				</div>
-
-				<div class="ProductItem blue-300">
-
-
-
-				</div>
+				<div class="ProductListItem-background" style="background-image: url('img/guarana-bg.png')"></div>
+				<div class="ProductListItem-target" style="background-image: url('img/guarana-fruit.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('img/guarana-pet.png')"></div>
 
 			</div>
 
-		</div>
+			<div class="ProductListItem red-200">
+
+				<div class="ProductListItem-background" style="background-image: url('img/abacaxi-bg.png')"></div>
+				<div class="ProductListItem-target" style="background-image: url('img/abacaxi-fruit.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('img/abacaxi-pet.png')"></div>
+
+			</div>
+
+			<div class="ProductListItem red-300">
+
+				<div class="ProductListItem-background" style="background-image: url('img/citrus-bg.png')"></div>
+				<div class="ProductListItem-target" style="background-image: url('img/citrus-fruit.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('img/citrus-pet.png')"></div>
+
+			</div>
+
+			<div class="ProductListItem blue-100">
+
+				<div class="ProductListItem-background" style="background-image: url('img/uva-bg.png')"></div>
+				<div class="ProductListItem-target" style="background-image: url('img/uva-fruit.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('img/uva-pet.png')"></div>
+
+			</div>
+
+			<div class="ProductListItem blue-200">
+
+				<div class="ProductListItem-background" style="background-image: url('img/laranja-bg.png')"></div>
+				<div class="ProductListItem-target" style="background-image: url('img/laranja-fruit.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('img/laranja-pet.png')"></div>
+
+			</div>
+
+			<div class="ProductListItem blue-300">
+
+				<div class="ProductListItem-background" style="background-image: url('img/cola-bg.png')"></div>
+				<div class="ProductListItem-target" style="background-image: url('img/cola-splash.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('img/cola-pet.png')"></div>
+
+			</div>
+
+		</nav>
+
+		<div class="ProductItem"></div>
+		<div class="ProductItem"></div>
+		<div class="ProductItem"></div>
+		<div class="ProductItem"></div>
+		<div class="ProductItem"></div>
+		<div class="ProductItem"></div>
 
 	</section>
 
