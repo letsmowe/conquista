@@ -49,6 +49,7 @@
 	}
 
 	.ProductListItem {
+		cursor: pointer;
 		flex: 1 1 auto;
 		height: 50vh;
 		min-width: 100%;
@@ -83,6 +84,21 @@
 		background-repeat: no-repeat;
 		-webkit-background-size: 40%;
 		background-size: 40%;
+	}
+
+	/* ProductItem */
+
+	.ProductItem {
+		visibility: hidden;
+	}
+
+	.ProductItem.is-active {
+		height: 100%;
+		left: 0;
+		position: fixed;
+		top: 0;
+		visibility: visible;
+		width: 100%;
 	}
 
 	@media (min-width: 36em) {
@@ -125,7 +141,7 @@
 
 		<nav class="ProductList">
 
-			<div class="ProductListItem red-100">
+			<div class="ProductListItem" data-target-id="guarana">
 
 				<div class="ProductListItem-background" style="background-image: url('img/guarana-bg.png')"></div>
 				<div class="ProductListItem-target" style="background-image: url('img/guarana-fruit.png')"></div>
@@ -133,7 +149,7 @@
 
 			</div>
 
-			<div class="ProductListItem red-200">
+			<div class="ProductListItem" data-target-id="abacaxi">
 
 				<div class="ProductListItem-background" style="background-image: url('img/abacaxi-bg.png')"></div>
 				<div class="ProductListItem-target" style="background-image: url('img/abacaxi-fruit.png')"></div>
@@ -141,7 +157,7 @@
 
 			</div>
 
-			<div class="ProductListItem red-300">
+			<div class="ProductListItem" data-target-id="citrus">
 
 				<div class="ProductListItem-background" style="background-image: url('img/citrus-bg.png')"></div>
 				<div class="ProductListItem-target" style="background-image: url('img/citrus-fruit.png')"></div>
@@ -149,7 +165,7 @@
 
 			</div>
 
-			<div class="ProductListItem blue-100">
+			<div class="ProductListItem" data-target-id="uva">
 
 				<div class="ProductListItem-background" style="background-image: url('img/uva-bg.png')"></div>
 				<div class="ProductListItem-target" style="background-image: url('img/uva-fruit.png')"></div>
@@ -157,7 +173,7 @@
 
 			</div>
 
-			<div class="ProductListItem blue-200">
+			<div class="ProductListItem" data-target-id="laranja">
 
 				<div class="ProductListItem-background" style="background-image: url('img/laranja-bg.png')"></div>
 				<div class="ProductListItem-target" style="background-image: url('img/laranja-fruit.png')"></div>
@@ -165,7 +181,7 @@
 
 			</div>
 
-			<div class="ProductListItem blue-300">
+			<div class="ProductListItem" data-target-id="cola">
 
 				<div class="ProductListItem-background" style="background-image: url('img/cola-bg.png')"></div>
 				<div class="ProductListItem-target" style="background-image: url('img/cola-splash.png')"></div>
@@ -175,12 +191,104 @@
 
 		</nav>
 
-		<div class="ProductItem"></div>
-		<div class="ProductItem"></div>
-		<div class="ProductItem"></div>
-		<div class="ProductItem"></div>
-		<div class="ProductItem"></div>
-		<div class="ProductItem"></div>
+		<style>
+
+			@media (min-width: 48em) {
+
+				.ProductItem {
+					padding: 0;
+					z-index: 2;
+				}
+
+				.ProductItem-inner {
+					display: -webkit-box;
+					display: -moz-box;
+					display: -ms-flexbox;
+					display: -webkit-flex;
+					display: flex;
+					height: 100%;
+					position: relative;
+					width: 100%;
+				}
+
+				.ProductItemBlur {
+					background: no-repeat center;
+					-webkit-background-size: cover;
+					-moz-background-size: cover;
+					-o-background-size: cover;
+					background-size: cover;
+					width: 40%;
+				}
+
+				.ProductItemInfo {
+					width: 60%;
+				}
+
+				.ProductItemImage {
+					height: 100%;
+					left: 0;
+					position: absolute;
+					top: 0;
+					width: 100%;
+				}
+
+				.ProductItemImage-wrapper {
+					-webkit-align-items: center;
+					align-items: center;
+					display: -webkit-box;
+					display: -moz-box;
+					display: -ms-flexbox;
+					display: -webkit-flex;
+					display: flex;
+					-webkit-justify-content: center;
+					justify-content: center;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					left: -10%;
+				}
+
+				.ProductItemImage img {
+					display: block;
+					max-height: 36em;
+					margin: 0 auto;
+				}
+
+			}
+
+		</style>
+
+		<div id="guarana" class="ProductItem is-active">
+
+			<div class="ProductItem-inner">
+
+				<div class="ProductItemBlur" style="background-image: url('img/guarana-blur-bg.png')"></div>
+
+				<figure class="ProductItemImage">
+
+					<div class="ProductItemImage-wrapper">
+
+						<img src="img/guarana-family.png" alt=""/>
+
+					</div>
+					
+				</figure>
+
+				<div class="ProductItemInfo grey-300"></div>
+
+			</div>
+
+		</div>
+
+		<div id="abacaxi" class="ProductItem yellow"></div>
+
+		<div id="citrus" class="ProductItem green"></div>
+
+		<div id="uva" class="ProductItem purple"></div>
+
+		<div id="laranja" class="ProductItem orange"></div>
+
+		<div id="cola" class="ProductItem red"></div>
 
 	</section>
 
@@ -191,6 +299,41 @@
 <script>
 
 	console.log('Welcome');
+
+	var ProductList = {};
+	ProductList.nav = {};
+	ProductList.nav.items = document.querySelectorAll('.ProductListItem');
+
+	ProductList.items = document.querySelectorAll('.ProductItem');
+
+	ProductList.resetItems = function (item) {
+
+		for (var i = ProductList.items.length; i--; )
+			ProductList.items[i].classList.remove('is-active');
+
+		if (item)
+			item.classList.add('is-active');
+
+	};
+
+	ProductList.onNavItemClick = function () {
+
+		if (this.dataset.targetId)
+			ProductList.resetItems(document.getElementById(this.dataset.targetId));
+
+	};
+
+	ProductList.onItemClick = function () {
+
+		ProductList.resetItems(false);
+
+	};
+
+	for (var i = ProductList.nav.items.length; i--; )
+		ProductList.nav.items[i].addEventListener('click', ProductList.onNavItemClick);
+
+	for (var i = ProductList.items.length; i--; )
+		ProductList.items[i].addEventListener('click', ProductList.onItemClick);
 
 </script>
 
