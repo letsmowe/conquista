@@ -3,6 +3,7 @@
 
 .Logo {
 	height: 4.5em;
+	z-index: 2;
 }
 
 .Logo-select-area {

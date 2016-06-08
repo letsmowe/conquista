@@ -15,6 +15,16 @@
 <script src="../dist/js/classList.min.js"></script>
 <![endif]-->
 
+<script>
+
+	document.onload = function () {
+
+		document.body.classList.remove('is-loading');
+
+	};
+
+</script>
+
 <style>
 
 	body {
@@ -31,7 +41,7 @@
 
 </style>
 
-<body>
+<body class="is-loading">
 
 <header class="Header">
 
@@ -47,7 +57,13 @@
 
 		</div>
 
-		<nav class="Nav">
+		<div id="toggle-nav" class="ToggleButton">
+
+			<span class="icon-menu font-white"></span>
+
+		</div>
+
+		<nav id="nav" class="Nav">
 
 			<ul class="Menu Menu--header">
 
@@ -136,18 +152,1073 @@
 
 </header>
 
-<main>
+<div class="Hero">
 
-	<div class="Hero">
+	<div class="Gallery">
 
-		<div class="Gallery">
+		<div class="GalleryItem GalleryItem--wave">
 
-			<div class="GalleryItem"></div>
-			<div class="GalleryItem"></div>
+			<div class="GalleryItem-background"></div>
+
+			<div class="GalleryItem-inner">
+
+				<div class="GalleryItem-container">
+
+					<img src="../dist/img/Hero_Wave-target.png" alt=""/>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="GalleryItem GalleryItem--family">
+
+			<div class="GalleryItem-background"></div>
+
+			<div class="GalleryItem-inner">
+				
+			</div>
 
 		</div>
 
 	</div>
+
+	<div class="Hero-overlay"></div>
+
+</div>
+
+<main>
+
+	<section class="Products">
+
+		<div class="ProductsAbout">
+
+			<div class="ProductsAbout-background">
+
+				<div class="ProductsAbout-overlay"></div>
+
+			</div>
+
+			<div class="ProductsAbout-inner">
+
+				<h2 class="font-light-blue-900">Nossos Produtos</h2>
+
+				<figure>
+
+					<img src="../dist/img/Family-pet.png" alt=""/>
+
+				</figure>
+
+				<p class="font-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus illum nobis unde. Architecto, corporis, deleniti deserunt dolore eius eveniet explicabo, ipsam nostrum saepe tempora vel veniam. Doloribus ducimus fugiat repellendus?</p>
+
+			</div>
+
+		</div>
+
+		<nav class="ProductList">
+
+			<div class="ProductListItem deep-orange-400" data-target-id="guarana">
+
+				<div class="ProductListItem-background"></div>
+				<div class="ProductListItem-target" style="background-image: url('../dist/img/guarana-fruit.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('../dist/img/guarana-pet.png')"></div>
+
+				<div class="ProductListItemTitle font-white">
+
+					<div class="ProductListItemTitle-background deep-orange-400"></div>
+
+					<span>Guaraná</span>
+
+				</div>
+
+			</div>
+
+			<div class="ProductListItem amber-300" data-target-id="abacaxi">
+
+				<div class="ProductListItem-background"></div>
+				<div class="ProductListItem-target" style="background-image: url('../dist/img/abacaxi-fruit.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('../dist/img/abacaxi-pet.png')"></div>
+
+				<div class="ProductListItemTitle font-white">
+
+					<div class="ProductListItemTitle-background amber-300"></div>
+
+					<span>Abacaxi</span>
+
+				</div>
+
+			</div>
+
+			<div class="ProductListItem light-green-400" data-target-id="citrus">
+
+				<div class="ProductListItem-background"></div>
+				<div class="ProductListItem-target" style="background-image: url('../dist/img/citrus-fruit.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('../dist/img/citrus-pet.png')"></div>
+
+				<div class="ProductListItemTitle font-white">
+
+					<div class="ProductListItemTitle-background light-green-400"></div>
+
+					<span>Citrus</span>
+
+				</div>
+
+			</div>
+
+			<div class="ProductListItem purple-200" data-target-id="uva">
+
+				<div class="ProductListItem-background"></div>
+				<div class="ProductListItem-target" style="background-image: url('../dist/img/uva-fruit.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('../dist/img/uva-pet.png')"></div>
+
+				<div class="ProductListItemTitle font-white">
+
+					<div class="ProductListItemTitle-background purple-200"></div>
+
+					<span>Uva</span>
+
+				</div>
+
+			</div>
+
+			<div class="ProductListItem orange-300" data-target-id="laranja">
+
+				<div class="ProductListItem-background"></div>
+				<div class="ProductListItem-target" style="background-image: url('../dist/img/laranja-fruit.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('../dist/img/laranja-pet.png')"></div>
+
+				<div class="ProductListItemTitle font-white">
+
+					<div class="ProductListItemTitle-background orange-300"></div>
+
+					<span>Laranja</span>
+
+				</div>
+
+			</div>
+
+			<div class="ProductListItem red-700" data-target-id="cola">
+
+				<div class="ProductListItem-background"></div>
+				<div class="ProductListItem-target" style="background-image: url('../dist/img/cola-splash.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('../dist/img/cola-pet.png')"></div>
+
+				<div class="ProductListItemTitle font-white">
+
+					<div class="ProductListItemTitle-background red-700"></div>
+
+					<span>Cola</span>
+
+				</div>
+
+			</div>
+
+			<div class="ProductListItem green-600" data-target-id="mix">
+
+				<div class="ProductListItem-background"></div>
+				<div class="ProductListItem-target" style="background-image: url('../dist/img/mix-splash-lemon.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('../dist/img/mix-pet.png')"></div>
+
+				<div class="ProductListItemTitle font-white">
+
+					<div class="ProductListItemTitle-background green-600"></div>
+
+					<span>Cola Mix</span>
+
+				</div>
+
+			</div>
+
+			<div class="ProductListItem light-green-300" data-target-id="limao">
+
+				<div class="ProductListItem-background"></div>
+				<div class="ProductListItem-target" style="background-image: url('../dist/img/limao-fruit.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('../dist/img/limao-pet.png')"></div>
+
+				<div class="ProductListItemTitle font-white">
+
+					<div class="ProductListItemTitle-background light-green-300"></div>
+
+					<span>Limão</span>
+
+				</div>
+
+			</div>
+
+			<div class="ProductListItem deep-purple-200" data-target-id="taubaina">
+
+				<div class="ProductListItem-background"></div>
+				<div class="ProductListItem-target" style="background-image: url('../dist/img/taubaina-fruits.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('../dist/img/taubaina-pet.png')"></div>
+
+				<div class="ProductListItemTitle font-white">
+
+					<div class="ProductListItemTitle-background deep-purple-200"></div>
+
+					<span>Taubaina</span>
+
+				</div>
+
+			</div>
+
+		</nav>
+
+		<div id="guarana" class="ProductItem">
+
+			<div class="ProductItem-inner">
+
+				<div class="ProductItemBlur" style="background-image: url('../dist/img/guarana-blur-bg.png')"></div>
+
+				<figure class="ProductItemImage">
+
+					<div class="ProductItemImage-wrapper">
+
+						<img src="../dist/img/guarana-family.png" alt=""/>
+
+					</div>
+
+				</figure>
+
+				<div class="ProductItemInfo font-grey-800">
+
+					<div class="ProductItemInfo-inner">
+
+						<h3>Guaraná</h3>
+
+						<h4>Ingredientes</h4>
+
+						<ul class="ProductItemInfoIngredientList">
+
+							<li>Água gaseificada</li>
+							<li>Açucar</li>
+							<li>Extrato de guaraná</li>
+							<li>Corantes INS 150 D</li>
+							<li>Conservador INS 211</li>
+							<li>Aroma natural</li>
+
+						</ul>
+
+						<h4>Informações nutricionais</h4>
+
+						<div class="ProductItemInfoNutrition">
+
+							<table>
+
+								<thead>
+
+								<tr>
+
+									<th colspan="2">Quantidade por Porção</th>
+									<th>% VD (*)</th>
+
+								</tr>
+
+								</thead>
+
+								<tbody>
+
+								<tr>
+
+									<td>Valor Energético</td>
+									<td>110 kcal</td>
+									<td>7%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Carboidrato</td>
+									<td>28 g</td>
+									<td>9%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Sódio</td>
+									<td>5,6 g</td>
+									<td>7%</td>
+
+								</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="abacaxi" class="ProductItem">
+
+			<div class="ProductItem-inner">
+
+				<div class="ProductItemBlur" style="background-image: url('../dist/img/abacaxi-blur-bg.png')"></div>
+
+				<figure class="ProductItemImage">
+
+					<div class="ProductItemImage-wrapper">
+
+						<img src="../dist/img/abacaxi-pet.png" alt=""/>
+
+					</div>
+
+				</figure>
+
+				<div class="ProductItemInfo font-grey-800">
+
+					<div class="ProductItemInfo-inner">
+
+						<h3>Abacaxi</h3>
+
+						<h4>Ingredientes</h4>
+
+						<ul class="ProductItemInfoIngredientList">
+
+							<li>Água gaseificada</li>
+							<li>Açucar</li>
+							<li>Extrato de guaraná</li>
+							<li>Corantes INS 150 D</li>
+							<li>Conservador INS 211</li>
+							<li>Aroma natural</li>
+
+						</ul>
+
+						<h4>Informações nutricionais</h4>
+
+						<div class="ProductItemInfoNutrition">
+
+							<table>
+
+								<thead>
+
+								<tr>
+
+									<th colspan="2">Quantidade por Porção</th>
+									<th>% VD (*)</th>
+
+								</tr>
+
+								</thead>
+
+								<tbody>
+
+								<tr>
+
+									<td>Valor Energético</td>
+									<td>110 kcal</td>
+									<td>7%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Carboidrato</td>
+									<td>28 g</td>
+									<td>9%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Sódio</td>
+									<td>5,6 g</td>
+									<td>7%</td>
+
+								</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="citrus" class="ProductItem">
+
+			<div class="ProductItem-inner">
+
+				<div class="ProductItemBlur" style="background-image: url('../dist/img/citrus-blur-bg.png')"></div>
+
+				<figure class="ProductItemImage">
+
+					<div class="ProductItemImage-wrapper">
+
+						<img src="../dist/img/citrus-pet.png" alt=""/>
+
+					</div>
+
+				</figure>
+
+				<div class="ProductItemInfo font-grey-800">
+
+					<div class="ProductItemInfo-inner">
+
+						<h3>Citrus</h3>
+
+						<h4>Ingredientes</h4>
+
+						<ul class="ProductItemInfoIngredientList">
+
+							<li>Água gaseificada</li>
+							<li>Açucar</li>
+							<li>Extrato de guaraná</li>
+							<li>Corantes INS 150 D</li>
+							<li>Conservador INS 211</li>
+							<li>Aroma natural</li>
+
+						</ul>
+
+						<h4>Informações nutricionais</h4>
+
+						<div class="ProductItemInfoNutrition">
+
+							<table>
+
+								<thead>
+
+								<tr>
+
+									<th colspan="2">Quantidade por Porção</th>
+									<th>% VD (*)</th>
+
+								</tr>
+
+								</thead>
+
+								<tbody>
+
+								<tr>
+
+									<td>Valor Energético</td>
+									<td>110 kcal</td>
+									<td>7%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Carboidrato</td>
+									<td>28 g</td>
+									<td>9%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Sódio</td>
+									<td>5,6 g</td>
+									<td>7%</td>
+
+								</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="uva" class="ProductItem">
+
+			<div class="ProductItem-inner">
+
+				<div class="ProductItemBlur" style="background-image: url('../dist/img/uva-blur-bg.png')"></div>
+
+				<figure class="ProductItemImage">
+
+					<div class="ProductItemImage-wrapper">
+
+						<img src="../dist/img/uva-pet.png" alt=""/>
+
+					</div>
+
+				</figure>
+
+				<div class="ProductItemInfo font-grey-800">
+
+					<div class="ProductItemInfo-inner">
+
+						<h3>Uva</h3>
+
+						<h4>Ingredientes</h4>
+
+						<ul class="ProductItemInfoIngredientList">
+
+							<li>Água gaseificada</li>
+							<li>Açucar</li>
+							<li>Extrato de guaraná</li>
+							<li>Corantes INS 150 D</li>
+							<li>Conservador INS 211</li>
+							<li>Aroma natural</li>
+
+						</ul>
+
+						<h4>Informações nutricionais</h4>
+
+						<div class="ProductItemInfoNutrition">
+
+							<table>
+
+								<thead>
+
+								<tr>
+
+									<th colspan="2">Quantidade por Porção</th>
+									<th>% VD (*)</th>
+
+								</tr>
+
+								</thead>
+
+								<tbody>
+
+								<tr>
+
+									<td>Valor Energético</td>
+									<td>110 kcal</td>
+									<td>7%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Carboidrato</td>
+									<td>28 g</td>
+									<td>9%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Sódio</td>
+									<td>5,6 g</td>
+									<td>7%</td>
+
+								</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="laranja" class="ProductItem">
+
+			<div class="ProductItem-inner">
+
+				<div class="ProductItemBlur" style="background-image: url('../dist/img/laranja-blur-bg.png')"></div>
+
+				<figure class="ProductItemImage">
+
+					<div class="ProductItemImage-wrapper">
+
+						<img src="../dist/img/laranja-family.png" alt=""/>
+
+					</div>
+
+				</figure>
+
+				<div class="ProductItemInfo font-grey-800">
+
+					<div class="ProductItemInfo-inner">
+
+						<h3>Laranja</h3>
+
+						<h4>Ingredientes</h4>
+
+						<ul class="ProductItemInfoIngredientList">
+
+							<li>Água gaseificada</li>
+							<li>Açucar</li>
+							<li>Extrato de guaraná</li>
+							<li>Corantes INS 150 D</li>
+							<li>Conservador INS 211</li>
+							<li>Aroma natural</li>
+
+						</ul>
+
+						<h4>Informações nutricionais</h4>
+
+						<div class="ProductItemInfoNutrition">
+
+							<table>
+
+								<thead>
+
+								<tr>
+
+									<th colspan="2">Quantidade por Porção</th>
+									<th>% VD (*)</th>
+
+								</tr>
+
+								</thead>
+
+								<tbody>
+
+								<tr>
+
+									<td>Valor Energético</td>
+									<td>110 kcal</td>
+									<td>7%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Carboidrato</td>
+									<td>28 g</td>
+									<td>9%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Sódio</td>
+									<td>5,6 g</td>
+									<td>7%</td>
+
+								</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="cola" class="ProductItem">
+
+			<div class="ProductItem-inner">
+
+				<div class="ProductItemBlur" style="background-image: url('../dist/img/cola-blur-bg.png')"></div>
+
+				<figure class="ProductItemImage">
+
+					<div class="ProductItemImage-wrapper">
+
+						<img src="../dist/img/cola-family.png" alt=""/>
+
+					</div>
+
+				</figure>
+
+				<div class="ProductItemInfo font-grey-800">
+
+					<div class="ProductItemInfo-inner">
+
+						<h3>Cola</h3>
+
+						<h4>Ingredientes</h4>
+
+						<ul class="ProductItemInfoIngredientList">
+
+							<li>Água gaseificada</li>
+							<li>Açucar</li>
+							<li>Extrato de guaraná</li>
+							<li>Corantes INS 150 D</li>
+							<li>Conservador INS 211</li>
+							<li>Aroma natural</li>
+
+						</ul>
+
+						<h4>Informações nutricionais</h4>
+
+						<div class="ProductItemInfoNutrition">
+
+							<table>
+
+								<thead>
+
+								<tr>
+
+									<th colspan="2">Quantidade por Porção</th>
+									<th>% VD (*)</th>
+
+								</tr>
+
+								</thead>
+
+								<tbody>
+
+								<tr>
+
+									<td>Valor Energético</td>
+									<td>110 kcal</td>
+									<td>7%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Carboidrato</td>
+									<td>28 g</td>
+									<td>9%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Sódio</td>
+									<td>5,6 g</td>
+									<td>7%</td>
+
+								</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="mix" class="ProductItem">
+
+			<div class="ProductItem-inner">
+
+				<div class="ProductItemBlur" style="background-image: url('../dist/img/mix-blur-bg.png')"></div>
+
+				<figure class="ProductItemImage">
+
+					<div class="ProductItemImage-wrapper">
+
+						<img src="../dist/img/mix-family.png" alt=""/>
+
+					</div>
+
+				</figure>
+
+				<div class="ProductItemInfo font-grey-800">
+
+					<div class="ProductItemInfo-inner">
+
+						<h3>Cola <span class="font-green-a700">Mix</span></h3>
+
+						<h4>Ingredientes</h4>
+
+						<ul class="ProductItemInfoIngredientList">
+
+							<li>Água gaseificada</li>
+							<li>Açucar</li>
+							<li>Extrato de guaraná</li>
+							<li>Corantes INS 150 D</li>
+							<li>Conservador INS 211</li>
+							<li>Aroma natural</li>
+
+						</ul>
+
+						<h4>Informações nutricionais</h4>
+
+						<div class="ProductItemInfoNutrition">
+
+							<table>
+
+								<thead>
+
+								<tr>
+
+									<th colspan="2">Quantidade por Porção</th>
+									<th>% VD (*)</th>
+
+								</tr>
+
+								</thead>
+
+								<tbody>
+
+								<tr>
+
+									<td>Valor Energético</td>
+									<td>110 kcal</td>
+									<td>7%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Carboidrato</td>
+									<td>28 g</td>
+									<td>9%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Sódio</td>
+									<td>5,6 g</td>
+									<td>7%</td>
+
+								</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="limao" class="ProductItem">
+
+			<div class="ProductItem-inner">
+
+				<div class="ProductItemBlur" style="background-image: url('../dist/img/limao-blur-bg.png')"></div>
+
+				<figure class="ProductItemImage">
+
+					<div class="ProductItemImage-wrapper">
+
+						<img src="../dist/img/limao-family.png" alt=""/>
+
+					</div>
+
+				</figure>
+
+				<div class="ProductItemInfo font-grey-800">
+
+					<div class="ProductItemInfo-inner">
+
+						<h3>Limão</h3>
+
+						<h4>Ingredientes</h4>
+
+						<ul class="ProductItemInfoIngredientList">
+
+							<li>Água gaseificada</li>
+							<li>Açucar</li>
+							<li>Extrato de guaraná</li>
+							<li>Corantes INS 150 D</li>
+							<li>Conservador INS 211</li>
+							<li>Aroma natural</li>
+
+						</ul>
+
+						<h4>Informações nutricionais</h4>
+
+						<div class="ProductItemInfoNutrition">
+
+							<table>
+
+								<thead>
+
+								<tr>
+
+									<th colspan="2">Quantidade por Porção</th>
+									<th>% VD (*)</th>
+
+								</tr>
+
+								</thead>
+
+								<tbody>
+
+								<tr>
+
+									<td>Valor Energético</td>
+									<td>110 kcal</td>
+									<td>7%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Carboidrato</td>
+									<td>28 g</td>
+									<td>9%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Sódio</td>
+									<td>5,6 g</td>
+									<td>7%</td>
+
+								</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="taubaina" class="ProductItem">
+
+			<div class="ProductItem-inner">
+
+				<div class="ProductItemBlur" style="background-image: url('../dist/img/taubaina-blur-bg.png')"></div>
+
+				<figure class="ProductItemImage">
+
+					<div class="ProductItemImage-wrapper">
+
+						<img src="../dist/img/taubaina-family.png" alt=""/>
+
+					</div>
+
+				</figure>
+
+				<div class="ProductItemInfo font-grey-800">
+
+					<div class="ProductItemInfo-inner">
+
+						<h3>Taubaina</h3>
+
+						<h4>Ingredientes</h4>
+
+						<ul class="ProductItemInfoIngredientList">
+
+							<li>Água gaseificada</li>
+							<li>Açucar</li>
+							<li>Extrato de guaraná</li>
+							<li>Corantes INS 150 D</li>
+							<li>Conservador INS 211</li>
+							<li>Aroma natural</li>
+
+						</ul>
+
+						<h4>Informações nutricionais</h4>
+
+						<div class="ProductItemInfoNutrition">
+
+							<table>
+
+								<thead>
+
+								<tr>
+
+									<th colspan="2">Quantidade por Porção</th>
+									<th>% VD (*)</th>
+
+								</tr>
+
+								</thead>
+
+								<tbody>
+
+								<tr>
+
+									<td>Valor Energético</td>
+									<td>110 kcal</td>
+									<td>7%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Carboidrato</td>
+									<td>28 g</td>
+									<td>9%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Sódio</td>
+									<td>5,6 g</td>
+									<td>7%</td>
+
+								</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="product-controls" class="ProductControls">
+
+			<div class="ProductControls-wrapper">
+
+				<button id="product-controls-previous" class="ProductControlsButton ProductControlsButton--arrows">
+
+					<span class="icon-angle-left"></span>
+
+				</button>
+
+				<button id="product-controls-close" class="ProductControlsButton ProductControlsButton--close">
+
+					<span class="icon-cancel"></span>
+
+				</button>
+
+				<button id="product-controls-next" class="ProductControlsButton ProductControlsButton--arrows">
+
+					<span class="icon-angle-right"></span>
+
+				</button>
+
+			</div>
+
+		</div>
+
+	</section>
 
 </main>
 
@@ -160,6 +1231,165 @@
 		console.log('Welcome!');
 
 	});
+
+</script>
+
+<script>
+
+	/* ProductList */
+
+	var ProductList = {};
+	ProductList.nav = {};
+	ProductList.nav.items = document.querySelectorAll('.ProductListItem');
+	ProductList.controls = document.getElementById('product-controls');
+	ProductList.controls.previous = document.getElementById('product-controls-previous');
+	ProductList.controls.close = document.getElementById('product-controls-close');
+	ProductList.controls.next = document.getElementById('product-controls-next');
+
+	ProductList.items = document.querySelectorAll('.ProductItem');
+
+	ProductList.resetItems = function (item) {
+
+		for (var i = ProductList.items.length; i--; )
+			ProductList.items[i].classList.remove('is-active');
+
+		if (item) {
+
+			item.classList.add('is-active');
+			ProductList.controls.classList.add('is-active');
+
+		} else {
+
+			ProductList.controls.classList.remove('is-active');
+
+		}
+
+	};
+
+	ProductList.onNavItemClick = function () {
+
+		if (this.dataset.targetId)
+			ProductList.resetItems(document.getElementById(this.dataset.targetId));
+
+	};
+
+	ProductList.onItemClick = function () {
+
+		ProductList.resetItems(false);
+
+	};
+
+	for (var i = ProductList.nav.items.length; i--; )
+		ProductList.nav.items[i].addEventListener('click', ProductList.onNavItemClick);
+
+	for (var i = ProductList.items.length; i--; )
+		ProductList.items[i].addEventListener('click', ProductList.onItemClick);
+
+	ProductList.controls.close.addEventListener('click', function () {
+
+		ProductList.resetItems(false);
+
+	});
+
+	ProductList.getPrevious = function () {
+
+		var previous = false;
+
+		for (var i = ProductList.items.length; i--; )
+			if (ProductList.items[i].classList.contains('is-active')) {
+
+				if (i == 0)
+					previous = ProductList.items[ProductList.items.length - 1];
+				else
+					previous = ProductList.items[i - 1];
+
+			}
+
+		ProductList.resetItems(previous);
+
+	};
+
+	ProductList.getNext = function () {
+
+		var next = false;
+
+		for (var i = 0; i < ProductList.items.length; i++)
+			if (ProductList.items[i].classList.contains('is-active')) {
+
+				if (i == ProductList.items.length - 1)
+					next = ProductList.items[0];
+				else
+					next = ProductList.items[i + 1];
+
+			}
+
+		ProductList.resetItems(next);
+
+	};
+
+	ProductList.controls.previous.addEventListener('click', ProductList.getPrevious);
+
+	ProductList.controls.next.addEventListener('click', ProductList.getNext);
+
+	ProductList.isActive = function () {
+
+		for (var i = ProductList.items.length; i--; )
+			if (ProductList.items[i].classList.contains('is-active'))
+				return ProductList.items[i];
+
+		return false;
+
+	};
+
+	// keydown listeners
+	window.addEventListener('keydown', function (event) {
+
+		// esc event
+		if (event.keyCode == 27)
+			if (ProductList.isActive())
+				ProductList.resetItems(false);
+
+		// arrow left
+		if (event.keyCode == 37)
+			if (ProductList.isActive())
+				ProductList.getPrevious();
+
+		// arrow right
+		if (event.keyCode == 39)
+			if (ProductList.isActive())
+				ProductList.getNext();
+
+	});
+
+</script>
+
+<script>
+
+	/* Toggle Button */
+
+	var nav = document.getElementById('nav');
+
+	nav.toggle = function () {
+
+		if (nav)
+			nav.classList.toggle('is-active');
+
+	};
+
+	document.getElementById('toggle-nav').addEventListener('click', function () {
+
+		nav.toggle();
+
+	});
+
+	/* Nav Items */
+
+	// get all nav menu--header items
+	// after we add listeners to this
+	nav.items = document.querySelectorAll('.Nav .MenuItem-select-area');
+
+	for (var i = nav.items.length; i--; )
+		nav.items[i].addEventListener('click', nav.toggle);
 
 </script>
 

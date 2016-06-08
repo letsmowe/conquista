@@ -2,11 +2,39 @@
 /* Nav */
 
 .Nav {
+	display: none;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+.Nav.is-active {
+	background-color: #0d47a1;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-justify-content: center;
-	justify-content: center;
+	height: 100vh;
+	left: 0;
+	padding-top: 6em;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+@media (min-width: 60em) {
+
+	.Nav {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		padding: 0;
+	}
+
+	.Nav.is-active {
+		position: static;
+	}
+
 }

@@ -1,0 +1,33 @@
+
+/* Toggle Button */
+
+.ToggleButton {
+	-webkit-align-items: center;
+	align-items: center;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	height: 4.5em;
+	-webkit-justify-content: center;
+	justify-content: center;
+	width: 4.5em;
+	z-index: 2;
+}
+
+/* Toggle Button span */
+
+.ToggleButton span {
+	font-size: 1.3125em;
+}
+
+@media (min-width: 60em)  {
+
+	/* Toggle Button */
+
+	.ToggleButton {
+		display: none;
+	}
+
+}

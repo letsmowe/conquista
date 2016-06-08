@@ -2577,12 +2577,103 @@
 }
 
 /* '' */
+/* Gallery Item */
+
+.GalleryItem {
+  height: 100%;
+  left: 0;
+  position: relative;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Gallery Item background and inner */
+
+.GalleryItem-background,
+.GalleryItem-inner {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Gallery Item background */
+
+.GalleryItem-background {
+  background: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.GalleryItem--wave .GalleryItem-background {
+  background-image: url("../img/Hero_Wave-background.jpg");
+}
+
+/* Gallery Item inner */
+
+.GalleryItem-inner {
+  padding: 0 1em;
+  z-index: 1;
+}
+
+/* Gallery Item inner img */
+
+.GalleryItem--wave .GalleryItem-inner img {
+  display: block;
+  max-height: 21em;
+  bottom: -1em;
+  position: absolute;
+}
+
+/* Gallery Item container */
+
+.GalleryItem-container {
+  margin: 0 auto;
+  height: 100%;
+  max-width: 72em;
+  width: 100%;
+}
+
+@media (min-width: 48em) {
+  /* Gallery Item inner */
+
+  .GalleryItem-inner {
+    padding: 0 1.5em;
+  }
+
+  /* Gallery Item inner img */
+
+  .GalleryItem--wave .GalleryItem-inner img {
+    max-height: 36em;
+  }
+}
+
+@media (min-width: 60em) {
+  /* Gallery Item inner img */
+
+  .GalleryItem--wave .GalleryItem-inner img {
+    max-height: 30em;
+  }
+}
+
+@media (min-width: 96em) {
+  /* Gallery Item inner img */
+
+  .GalleryItem--wave .GalleryItem-inner img {
+    max-height: 42em;
+  }
+}
 /* Gallery */
 
 .Gallery {
   position: relative;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
 }
 /* Header */
 
@@ -2597,7 +2688,7 @@
   height: 6em;
   position: absolute;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .Header-inner {
@@ -2637,11 +2728,31 @@
   background: linear-gradient(to right, rgba(33,149,243,1) 0%, rgba(220,231,117,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2195f3', endColorstr='#dce775', GradientType=1 );
   display: block;
+  position: relative;
+}
+
+/* Hero overlay */
+
+.Hero-overlay {
+  background: rgba(0,0,0,0.3);
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.12) 36%, rgba(0,0,0,0) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.3)), color-stop(36%, rgba(0,0,0,0.12)), color-stop(100%, rgba(0,0,0,0)));
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.12) 36%, rgba(0,0,0,0) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.12) 36%, rgba(0,0,0,0) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.12) 36%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.12) 36%, rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 /* Logo */
 
 .Logo {
   height: 4.5em;
+  z-index: 2;
 }
 
 .Logo-select-area {
@@ -2710,6 +2821,10 @@
   transition: all .4s ease-in-out;
 }
 
+.Nav.is-active .Menu--header .MenuItem-select-area {
+  color: #0d47a1;
+}
+
 .MenuItem-select-area:hover {
   background-color: rgba(255,255,255,0);
   color: #80d8ff;
@@ -2724,8 +2839,18 @@
   transform: scale(1.2);
 }
 
+.Nav.is-active .Menu--header .MenuItem-select-area:hover {
+  color: #0d47a1;
+}
+
 .Menu--social .MenuItem:first-of-type .MenuItem-select-area {
   /*padding: 0 1em 1em;*/
+}
+
+/* Menu Item text */
+
+.Nav.is-active .Menu--header .MenuItem-text {
+  font-size: 1.5em;
 }
 
 @media (min-width: 48em) {
@@ -2749,14 +2874,69 @@
   display: flex;
 }
 
+.Nav.is-active .Menu--header {
+  -webkit-align-items: center;
+  align-items: center;
+  background-color: #ffffff;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .Menu--social {
   -webkit-flex-flow: column;
   flex-flow: column;
-  padding-top: 8em;
+  padding-top: 7em;
+}
+
+@media (min-width: 60em) {
+  .Menu--social {
+    padding-top: 8em;
+  }
 }
 /* Nav */
 
 .Nav {
+  display: none;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.Nav.is-active {
+  background-color: #0d47a1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  height: 100vh;
+  left: 0;
+  padding-top: 6em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+@media (min-width: 60em) {
+  .Nav {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    padding: 0;
+  }
+
+  .Nav.is-active {
+    position: static;
+  }
+}
+/* Product List Item Title */
+
+.ProductListItemTitle {
+  bottom: 0;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -2764,4 +2944,507 @@
   display: flex;
   -webkit-justify-content: center;
   justify-content: center;
+  height: 40%;
+  padding: 1em 1em 0;
+  position: absolute;
+  -webkit-transition: transform .6s cubic-bezier(.5,.5,0,1);
+  -moz-transition: transform .6s cubic-bezier(.5,.5,0,1);
+  -ms-transition: transform .6s cubic-bezier(.5,.5,0,1);
+  -o-transition: transform .6s cubic-bezier(.5,.5,0,1);
+  transition: transform .6s cubic-bezier(.5,.5,0,1);
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+  width: 100%;
+}
+
+.ProductListItem:hover .ProductListItemTitle {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.ProductListItemTitle span {
+  position: relative;
+  font-size: 3em;
+  font-weight: 900;
+}
+
+.ProductListItemTitle-background {
+  height: 100%;
+  left: 0;
+  opacity: .8;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@media (min-width: 48em) {
+  .ProductListItemTitle span {
+    font-size: 3.75em;
+  }
+}
+/* Product List Item */
+
+.ProductListItem {
+  cursor: pointer;
+  flex: 1 1 auto;
+  height: 50vh;
+  min-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.ProductListItem-background,
+.ProductListItem-product,
+.ProductListItem-target {
+  background-position: center;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.ProductListItem-background {
+  background: rgba(255,255,255,0.72);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,0.72)), color-stop(70%, rgba(255,255,255,0)), color-stop(100%, rgba(255,255,255,0)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%);
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50vh;
+  /*-webkit-background-size: cover;*/
+  /*-moz-background-size: cover;*/
+  /*-o-background-size: cover;*/
+  /*background-size: cover;*/
+}
+
+.ProductListItem-product {
+  background-repeat: no-repeat;
+  -webkit-background-size: 20%;
+  background-size: 20%;
+}
+
+.ProductListItem-target {
+  background-repeat: no-repeat;
+  -webkit-background-size: 40%;
+  background-size: 40%;
+}
+
+@media (min-width: 36em) {
+  .ProductListItem {
+    width: 50%;
+    min-width: 0;
+  }
+}
+
+@media (min-width: 60em) {
+  .ProductListItem {
+    width: 33.3333333333%;
+  }
+}
+/* Product List */
+
+.ProductList {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+main {
+  display: block;
+  height: 100vh;
+  width: 100%;
+  -webkit-transition: padding .3s;
+  -moz-transition: padding .3s;
+  -ms-transition: padding .3s;
+  -o-transition: padding .3s;
+  transition: padding .3s;
+}
+
+
+
+/* ProductItem */
+
+.ProductItem {
+  visibility: hidden;
+}
+
+.ProductItem.is-active {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  visibility: visible;
+  width: 100%;
+}
+
+@media (min-width: 48em) {
+  main {
+    padding: 0 2.25em;
+  }
+
+  .ProductsAbout {
+    height: 100vh;
+    margin-bottom: 1em;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+
+  .ProductsAbout-background {
+    background: url("../img/Unsplash_Wave.jpg") no-repeat 0%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .ProductsAbout-overlay {
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(60%, rgba(255,255,255,0)), color-stop(100%, rgba(255,255,255,0)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .ProductsAbout-inner {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column;
+    flex-flow: column;
+    height: 100%;
+    left: 0;
+    padding-top: 8em;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .ProductsAbout h2 {
+    font-size: 4.5em;
+    font-weight: 900;
+    letter-spacing: -1.5pt;
+    margin-bottom: 1em;
+    z-index: 1;
+  }
+
+  .ProductsAbout p {
+    font-size: 1.3125em;
+    font-weight: 500;
+    max-width: 40em;
+    z-index: 1;
+  }
+
+  .ProductsAbout figure {
+    bottom: -6em;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .ProductsAbout img {
+    display: block;
+    max-height: 18em;
+  }
+
+  /* Product Item */
+
+  .ProductItem {
+    position: fixed;
+    left: 0;
+    padding: 0;
+    top: 0;
+    z-index: 2;
+  }
+
+  .ProductItem-inner {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+
+  .ProductItemBlur {
+    background: no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 45%;
+  }
+
+  .ProductItemInfo {
+    position: relative;
+    width: 55%;
+  }
+
+  .ProductItemImage {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .ProductItemImage-wrapper {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -5%;
+  }
+
+  .ProductItemImage img {
+    display: block;
+    max-height: 24em;
+    margin: 0 auto;
+    z-index: 3;
+  }
+
+  .ProductItemInfo {
+    background-color: #eeeeee;
+    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+  }
+
+  .ProductItemInfo-inner {
+    min-height: 100%;
+    padding: 4.5em 8em 3em 8em;
+    width: 100%;
+  }
+
+  .ProductItemInfo h3 {
+    font-size: 4.5em;
+    font-weight: 600;
+    letter-spacing: -3pt;
+    margin-bottom: .375em;
+  }
+
+  .ProductItemInfo h4 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+
+  .ProductItemInfoIngredientList {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column;
+    flex-flow: column;
+    margin-bottom: 1.5em;
+  }
+
+  .ProductItemInfoIngredientList li {
+    display: list-item;
+    margin-left: 1em;
+    max-width: 24em;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .ProductItemInfoNutrition {
+    background-color: #ffffff;
+    padding: 1.5em;
+    width: 100%;
+  }
+
+  .ProductItemInfoNutrition table {
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  .ProductItemInfoNutrition td,
+  .ProductItemInfoNutrition th {
+    border-bottom: solid 1px #bdbdbd;
+  }
+
+  .ProductItemInfoNutrition th {
+    padding: .75em .5em 1em;
+  }
+
+  .ProductItemInfoNutrition td {
+    padding: .675em .5em .75em;
+  }
+
+  .ProductItemInfoNutrition tr:last-of-type td {
+    border: none;
+  }
+
+  /* Product Controls */
+
+  .ProductControls {
+    visibility: hidden;
+    bottom: 0;
+    height: 6em;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+  }
+
+  .ProductControls.is-active {
+    visibility: visible;
+  }
+
+  .ProductControls-wrapper {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: -5%;
+  }
+
+  .ProductControlsButton {
+    color: #eeeeee;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: #616161;
+    height: 3.75em;
+    margin: 0 .375em;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    width: 3.75em;
+  }
+
+  .ProductControlsButton--arrows {
+    height: 3em;
+    width: 3em;
+  }
+
+  .ProductControlsButton--close span {
+    font-size: 1.125em;
+  }
+
+  .ProductControlsButton:hover {
+    background-color: #424242;
+  }
+}
+
+@media (min-width: 60em) {
+  main {
+    padding: 0 3em;
+  }
+}
+
+@media (min-width: 96em) {
+  .ProductItemInfo-inner {
+    padding: 4.5em 8em 3em 12em;
+  }
+
+  .ProductItemImage img {
+    max-height: 36em;
+  }
+
+  .ProductControls {
+    height: 8em;
+  }
+
+  .ProductControlsButton {
+    height: 4.5em;
+    width: 4.5em;
+  }
+
+  .ProductControlsButton--arrows {
+    height: 3.75em;
+    width: 3.75em;
+  }
+}
+/* Toggle Button */
+
+.ToggleButton {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  height: 4.5em;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 4.5em;
+  z-index: 2;
+}
+
+/* Toggle Button span */
+
+.ToggleButton span {
+  font-size: 1.3125em;
+}
+
+@media (min-width: 60em) {
+  /* Toggle Button */
+
+  .ToggleButton {
+    display: none;
+  }
 }

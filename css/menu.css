@@ -9,8 +9,27 @@
 	display: flex;
 }
 
+.Nav.is-active .Menu--header {
+	-webkit-align-items: center;
+	align-items: center;
+	background-color: #ffffff;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	width: 100%;
+}
+
 .Menu--social {
 	-webkit-flex-flow: column;
 	flex-flow: column;
-	padding-top: 8em;
+	padding-top: 7em;
+}
+
+@media (min-width: 60em) {
+
+	.Menu--social {
+		padding-top: 8em;
+	}
+
 }

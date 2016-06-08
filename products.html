@@ -117,6 +117,296 @@
 			padding: 0 2.25em;
 		}
 
+		.ProductsAbout {
+			height: 100vh;
+			position: relative;
+			text-align: center;
+			width: 100%;
+			overflow: hidden;
+		}
+
+		.ProductsAbout-background {
+			background: url("img/Unsplash_Wave.jpg") no-repeat 0%;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			position: absolute;
+			height: 100%;
+			left: 0;
+			top: 0;
+			width: 100%;
+		}
+
+		.ProductsAbout-overlay {
+			background: rgba(255,255,255,1);
+			background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+			background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(60%, rgba(255,255,255,0)), color-stop(100%, rgba(255,255,255,0)));
+			background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+			background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+			background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+			background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		.ProductsAbout-inner {
+			-webkit-align-items: center;
+			align-items: center;
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-flow: column;
+			flex-flow: column;
+			height: 100%;
+			left: 0;
+			padding-top: 8em;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+	    .ProductsAbout h2 {
+		    font-size: 4.5em;
+		    font-weight: 900;
+		    letter-spacing: -1.5pt;
+		    margin-bottom: 1em;
+		    z-index: 1;
+	    }
+
+	    .ProductsAbout p {
+		    font-size: 1.3125em;
+		    font-weight: 500;
+		    max-width: 40em;
+		    z-index: 1;
+	    }
+
+	    .ProductsAbout figure {
+		    bottom: -6em;
+		    display: -webkit-box;
+		    display: -moz-box;
+		    display: -ms-flexbox;
+		    display: -webkit-flex;
+		    display: flex;
+		    -webkit-justify-content: center;
+		    justify-content: center;
+		    left: 0;
+		    position: absolute;
+		    width: 100%;
+	    }
+
+	    .ProductsAbout img {
+		    display: block;
+		    max-height: 18em;
+	    }
+
+		/* Product Item */
+
+		.ProductItem {
+			position: fixed;
+			left: 0;
+			padding: 0;
+			top: 0;
+			z-index: 2;
+		}
+
+		.ProductItem-inner {
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			height: 100%;
+			position: relative;
+			width: 100%;
+		}
+
+		.ProductItemBlur {
+			background: no-repeat center;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			width: 45%;
+		}
+
+		.ProductItemInfo {
+			position: relative;
+			width: 55%;
+		}
+
+		.ProductItemImage {
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		.ProductItemImage-wrapper {
+			-webkit-align-items: center;
+			align-items: center;
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-justify-content: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: -5%;
+		}
+
+		.ProductItemImage img {
+			display: block;
+			max-height: 24em;
+			margin: 0 auto;
+			z-index: 3;
+		}
+
+		.ProductItemInfo {
+			height: 100%;
+			max-height: 100%;
+			overflow-y: auto;
+		}
+
+		.ProductItemInfo-inner {
+			min-height: 100%;
+			padding: 4.5em 8em 3em 8em;
+			width: 100%;
+		}
+
+		.ProductItemInfo h3 {
+			font-size: 4.5em;
+			font-weight: 600;
+			letter-spacing: -3pt;
+			margin-bottom: .375em;
+		}
+
+		.ProductItemInfo h4 {
+			font-size: 1.5em;
+			font-weight: 600;
+			margin-bottom: 1em;
+		}
+
+		.ProductItemInfoIngredientList {
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-flow: column;
+			flex-flow: column;
+			margin-bottom: 1.5em;
+		}
+
+		.ProductItemInfoIngredientList li {
+			display: list-item;
+			margin-left: 1em;
+			max-width: 24em;
+			font-weight: 400;
+			line-height: 1.6;
+		}
+
+		.ProductItemInfoNutrition {
+			background-color: #ffffff;
+			padding: 1.5em;
+			width: 100%;
+		}
+
+		.ProductItemInfoNutrition table {
+			border-collapse: separate;
+			border-spacing: 0;
+			text-align: left;
+			width: 100%;
+		}
+
+		.ProductItemInfoNutrition td,
+		.ProductItemInfoNutrition th {
+			border-bottom: solid 1px #bdbdbd;
+		}
+
+		.ProductItemInfoNutrition th {
+			padding: .75em .5em 1em;
+		}
+
+		.ProductItemInfoNutrition td {
+			padding: .675em .5em .75em;
+		}
+
+		.ProductItemInfoNutrition tr:last-of-type td {
+			border: none;
+		}
+
+		/* Product Controls */
+
+		.ProductControls {
+			visibility: hidden;
+			bottom: 0;
+			height: 6em;
+			left: 0;
+			position: fixed;
+			width: 100%;
+			z-index: 9;
+		}
+
+		.ProductControls.is-active {
+			visibility: visible;
+		}
+
+		.ProductControls-wrapper {
+			-webkit-align-items: center;
+			align-items: center;
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-justify-content: center;
+			justify-content: center;
+			height: 100%;
+			position: absolute;
+			width: 100%;
+			left: -5%;
+		}
+
+		.ProductControlsButton {
+			color: #eeeeee;
+			cursor: pointer;
+			border: none;
+			border-radius: 50%;
+			background-color: #616161;
+			height: 3.75em;
+			margin: 0 .375em;
+			-webkit-transition: all .3s;
+			-moz-transition: all .3s;
+			-ms-transition: all .3s;
+			-o-transition: all .3s;
+			transition: all .3s;
+			width: 3.75em;
+		}
+
+		.ProductControlsButton--arrows {
+			height: 3em;
+			width: 3em;
+		}
+
+		.ProductControlsButton--close span {
+			font-size: 1.125em;
+		}
+
+		.ProductControlsButton:hover {
+			background-color: #424242;
+		}
+
 	}
 
 	@media (min-width: 60em) {
@@ -131,6 +421,32 @@
 
 	}
 
+	@media (min-width: 96em) {
+
+		.ProductItemInfo-inner {
+			padding: 4.5em 8em 3em 12em;
+		}
+
+		.ProductItemImage img {
+			max-height: 36em;
+		}
+
+		.ProductControls {
+			height: 8em;
+		}
+
+		.ProductControlsButton {
+			height: 4.5em;
+			width: 4.5em;
+		}
+
+		.ProductControlsButton--arrows {
+			height: 3.75em;
+			width: 3.75em;
+		}
+
+	}
+
 </style>
 
 <body>
@@ -138,6 +454,30 @@
 <main>
 
 	<section class="Products">
+
+		<div class="ProductsAbout">
+
+			<div class="ProductsAbout-background">
+
+				<div class="ProductsAbout-overlay"></div>
+
+			</div>
+
+			<div class="ProductsAbout-inner">
+
+				<h2 class="font-light-blue-900">Nossos Produtos</h2>
+
+				<figure>
+
+					<img src="img/Family-pet.png" alt=""/>
+
+				</figure>
+
+				<p class="font-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus illum nobis unde. Architecto, corporis, deleniti deserunt dolore eius eveniet explicabo, ipsam nostrum saepe tempora vel veniam. Doloribus ducimus fugiat repellendus?</p>
+
+			</div>
+
+		</div>
 
 		<nav class="ProductList">
 
@@ -189,76 +529,33 @@
 
 			</div>
 
+			<div class="ProductListItem" data-target-id="mix">
+
+				<div class="ProductListItem-background" style="background-image: url('img/mix_bg.png')"></div>
+				<div class="ProductListItem-target" style="background-image: url('img/mix-splash-lemon.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('img/mix-pet.png')"></div>
+
+			</div>
+
+			<div class="ProductListItem" data-target-id="limao">
+
+				<div class="ProductListItem-background" style="background-image: url('img/limao_bg.png')"></div>
+				<div class="ProductListItem-target" style="background-image: url('img/limao-fruit.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('img/limao-pet.png')"></div>
+
+			</div>
+
+			<div class="ProductListItem" data-target-id="taubaina">
+
+				<div class="ProductListItem-background" style="background-image: url('img/taubaina-bg.png')"></div>
+				<div class="ProductListItem-target" style="background-image: url('img/taubaina-fruits.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('img/taubaina-pet.png')"></div>
+
+			</div>
+
 		</nav>
 
-		<style>
-
-			@media (min-width: 48em) {
-
-				.ProductItem {
-					padding: 0;
-					z-index: 2;
-				}
-
-				.ProductItem-inner {
-					display: -webkit-box;
-					display: -moz-box;
-					display: -ms-flexbox;
-					display: -webkit-flex;
-					display: flex;
-					height: 100%;
-					position: relative;
-					width: 100%;
-				}
-
-				.ProductItemBlur {
-					background: no-repeat center;
-					-webkit-background-size: cover;
-					-moz-background-size: cover;
-					-o-background-size: cover;
-					background-size: cover;
-					width: 40%;
-				}
-
-				.ProductItemInfo {
-					width: 60%;
-				}
-
-				.ProductItemImage {
-					height: 100%;
-					left: 0;
-					position: absolute;
-					top: 0;
-					width: 100%;
-				}
-
-				.ProductItemImage-wrapper {
-					-webkit-align-items: center;
-					align-items: center;
-					display: -webkit-box;
-					display: -moz-box;
-					display: -ms-flexbox;
-					display: -webkit-flex;
-					display: flex;
-					-webkit-justify-content: center;
-					justify-content: center;
-					width: 100%;
-					height: 100%;
-					position: absolute;
-					left: -10%;
-				}
-
-				.ProductItemImage img {
-					display: block;
-					max-height: 36em;
-					margin: 0 auto;
-				}
-
-			}
-
-		</style>
-
-		<div id="guarana" class="ProductItem is-active">
+		<div id="guarana" class="ProductItem">
 
 			<div class="ProductItem-inner">
 
@@ -274,21 +571,825 @@
 					
 				</figure>
 
-				<div class="ProductItemInfo grey-300"></div>
+				<div class="ProductItemInfo grey-300 font-grey-800">
+
+					<div class="ProductItemInfo-inner">
+
+						<h3>Guaraná</h3>
+
+						<h4>Ingredientes</h4>
+
+						<ul class="ProductItemInfoIngredientList">
+
+							<li>Koolzuurhoudend Spa® mineraalwater 86,7% (bron Barisart)</li>
+							<li>Suiker</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+
+						</ul>
+
+						<h4>Informações nutricionais</h4>
+
+						<div class="ProductItemInfoNutrition">
+
+							<table>
+
+								<thead>
+
+									<tr>
+
+										<th colspan="2">Quantidade por Porção</th>
+										<th>% VD (*)</th>
+
+									</tr>
+
+								</thead>
+
+								<tbody>
+
+									<tr>
+
+										<td>Valor Energético</td>
+										<td>110 kcal</td>
+										<td>7%</td>
+
+									</tr>
+
+									<tr>
+
+										<td>Carboidrato</td>
+										<td>28 g</td>
+										<td>9%</td>
+
+									</tr>
+
+									<tr>
+
+										<td>Sódio</td>
+										<td>5,6 g</td>
+										<td>7%</td>
+
+									</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
 
 			</div>
 
 		</div>
 
-		<div id="abacaxi" class="ProductItem yellow"></div>
+		<div id="abacaxi" class="ProductItem">
 
-		<div id="citrus" class="ProductItem green"></div>
+			<div class="ProductItem-inner">
 
-		<div id="uva" class="ProductItem purple"></div>
+				<div class="ProductItemBlur" style="background-image: url('img/abacaxi-blur-bg.png')"></div>
 
-		<div id="laranja" class="ProductItem orange"></div>
+				<figure class="ProductItemImage">
 
-		<div id="cola" class="ProductItem red"></div>
+					<div class="ProductItemImage-wrapper">
+
+						<img src="img/abacaxi-pet.png" alt=""/>
+
+					</div>
+
+				</figure>
+
+				<div class="ProductItemInfo grey-300 font-grey-800">
+
+					<div class="ProductItemInfo-inner">
+
+						<h3>Abacaxi</h3>
+
+						<h4>Ingredientes</h4>
+
+						<ul class="ProductItemInfoIngredientList">
+
+							<li>Koolzuurhoudend Spa® mineraalwater 86,7% (bron Barisart)</li>
+							<li>Suiker</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+
+						</ul>
+
+						<h4>Informações nutricionais</h4>
+
+						<div class="ProductItemInfoNutrition">
+
+							<table>
+
+								<thead>
+
+									<tr>
+
+										<th colspan="2">Quantidade por Porção</th>
+										<th>% VD (*)</th>
+
+									</tr>
+
+								</thead>
+
+								<tbody>
+
+									<tr>
+
+										<td>Valor Energético</td>
+										<td>110 kcal</td>
+										<td>7%</td>
+
+									</tr>
+
+									<tr>
+
+										<td>Carboidrato</td>
+										<td>28 g</td>
+										<td>9%</td>
+
+									</tr>
+
+									<tr>
+
+										<td>Sódio</td>
+										<td>5,6 g</td>
+										<td>7%</td>
+
+									</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="citrus" class="ProductItem">
+
+			<div class="ProductItem-inner">
+
+				<div class="ProductItemBlur" style="background-image: url('img/citrus-blur-bg.png')"></div>
+
+				<figure class="ProductItemImage">
+
+					<div class="ProductItemImage-wrapper">
+
+						<img src="img/citrus-pet.png" alt=""/>
+
+					</div>
+
+				</figure>
+
+				<div class="ProductItemInfo grey-300 font-grey-800">
+
+					<div class="ProductItemInfo-inner">
+
+						<h3>Citrus</h3>
+
+						<h4>Ingredientes</h4>
+
+						<ul class="ProductItemInfoIngredientList">
+
+							<li>Koolzuurhoudend Spa® mineraalwater 86,7% (bron Barisart)</li>
+							<li>Suiker</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+
+						</ul>
+
+						<h4>Informações nutricionais</h4>
+
+						<div class="ProductItemInfoNutrition">
+
+							<table>
+
+								<thead>
+
+									<tr>
+
+										<th colspan="2">Quantidade por Porção</th>
+										<th>% VD (*)</th>
+
+									</tr>
+
+								</thead>
+
+								<tbody>
+
+									<tr>
+
+										<td>Valor Energético</td>
+										<td>110 kcal</td>
+										<td>7%</td>
+
+									</tr>
+
+									<tr>
+
+										<td>Carboidrato</td>
+										<td>28 g</td>
+										<td>9%</td>
+
+									</tr>
+
+									<tr>
+
+										<td>Sódio</td>
+										<td>5,6 g</td>
+										<td>7%</td>
+
+									</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="uva" class="ProductItem">
+
+			<div class="ProductItem-inner">
+
+				<div class="ProductItemBlur" style="background-image: url('img/uva-blur-bg.png')"></div>
+
+				<figure class="ProductItemImage">
+
+					<div class="ProductItemImage-wrapper">
+
+						<img src="img/uva-pet.png" alt=""/>
+
+					</div>
+
+				</figure>
+
+				<div class="ProductItemInfo grey-300 font-grey-800">
+
+					<div class="ProductItemInfo-inner">
+
+						<h3>Uva</h3>
+
+						<h4>Ingredientes</h4>
+
+						<ul class="ProductItemInfoIngredientList">
+
+							<li>Koolzuurhoudend Spa® mineraalwater 86,7% (bron Barisart)</li>
+							<li>Suiker</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+
+						</ul>
+
+						<h4>Informações nutricionais</h4>
+
+						<div class="ProductItemInfoNutrition">
+
+							<table>
+
+								<thead>
+
+									<tr>
+
+										<th colspan="2">Quantidade por Porção</th>
+										<th>% VD (*)</th>
+
+									</tr>
+
+								</thead>
+
+								<tbody>
+
+									<tr>
+
+										<td>Valor Energético</td>
+										<td>110 kcal</td>
+										<td>7%</td>
+
+									</tr>
+
+									<tr>
+
+										<td>Carboidrato</td>
+										<td>28 g</td>
+										<td>9%</td>
+
+									</tr>
+
+									<tr>
+
+										<td>Sódio</td>
+										<td>5,6 g</td>
+										<td>7%</td>
+
+									</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="laranja" class="ProductItem">
+
+			<div class="ProductItem-inner">
+
+				<div class="ProductItemBlur" style="background-image: url('img/laranja-blur-bg.png')"></div>
+
+				<figure class="ProductItemImage">
+
+					<div class="ProductItemImage-wrapper">
+
+						<img src="img/laranja-family.png" alt=""/>
+
+					</div>
+
+				</figure>
+
+				<div class="ProductItemInfo grey-300 font-grey-800">
+
+					<div class="ProductItemInfo-inner">
+
+						<h3>Laranja</h3>
+
+						<h4>Ingredientes</h4>
+
+						<ul class="ProductItemInfoIngredientList">
+
+							<li>Koolzuurhoudend Spa® mineraalwater 86,7% (bron Barisart)</li>
+							<li>Suiker</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+
+						</ul>
+
+						<h4>Informações nutricionais</h4>
+
+						<div class="ProductItemInfoNutrition">
+
+							<table>
+
+								<thead>
+
+									<tr>
+
+										<th colspan="2">Quantidade por Porção</th>
+										<th>% VD (*)</th>
+
+									</tr>
+
+								</thead>
+
+								<tbody>
+
+									<tr>
+
+										<td>Valor Energético</td>
+										<td>110 kcal</td>
+										<td>7%</td>
+
+									</tr>
+
+									<tr>
+
+										<td>Carboidrato</td>
+										<td>28 g</td>
+										<td>9%</td>
+
+									</tr>
+
+									<tr>
+
+										<td>Sódio</td>
+										<td>5,6 g</td>
+										<td>7%</td>
+
+									</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="cola" class="ProductItem">
+
+			<div class="ProductItem-inner">
+
+				<div class="ProductItemBlur" style="background-image: url('img/cola-blur-bg.png')"></div>
+
+				<figure class="ProductItemImage">
+
+					<div class="ProductItemImage-wrapper">
+
+						<img src="img/cola-family.png" alt=""/>
+
+					</div>
+
+				</figure>
+
+				<div class="ProductItemInfo grey-300 font-grey-800">
+
+					<div class="ProductItemInfo-inner">
+
+						<h3>Cola</h3>
+
+						<h4>Ingredientes</h4>
+
+						<ul class="ProductItemInfoIngredientList">
+
+							<li>Koolzuurhoudend Spa® mineraalwater 86,7% (bron Barisart)</li>
+							<li>Suiker</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+
+						</ul>
+
+						<h4>Informações nutricionais</h4>
+
+						<div class="ProductItemInfoNutrition">
+
+							<table>
+
+								<thead>
+
+									<tr>
+
+										<th colspan="2">Quantidade por Porção</th>
+										<th>% VD (*)</th>
+
+									</tr>
+
+								</thead>
+
+								<tbody>
+
+									<tr>
+
+										<td>Valor Energético</td>
+										<td>110 kcal</td>
+										<td>7%</td>
+
+									</tr>
+
+									<tr>
+
+										<td>Carboidrato</td>
+										<td>28 g</td>
+										<td>9%</td>
+
+									</tr>
+
+									<tr>
+
+										<td>Sódio</td>
+										<td>5,6 g</td>
+										<td>7%</td>
+
+									</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="mix" class="ProductItem">
+
+			<div class="ProductItem-inner">
+
+				<div class="ProductItemBlur" style="background-image: url('img/mix-blur-bg.png')"></div>
+
+				<figure class="ProductItemImage">
+
+					<div class="ProductItemImage-wrapper">
+
+						<img src="img/mix-family.png" alt=""/>
+
+					</div>
+
+				</figure>
+
+				<div class="ProductItemInfo grey-300 font-grey-800">
+
+					<div class="ProductItemInfo-inner">
+
+						<h3>Cola <span class="font-green-a700">Mix</span></h3>
+
+						<h4>Ingredientes</h4>
+
+						<ul class="ProductItemInfoIngredientList">
+
+							<li>Koolzuurhoudend Spa® mineraalwater 86,7% (bron Barisart)</li>
+							<li>Suiker</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+
+						</ul>
+
+						<h4>Informações nutricionais</h4>
+
+						<div class="ProductItemInfoNutrition">
+
+							<table>
+
+								<thead>
+
+								<tr>
+
+									<th colspan="2">Quantidade por Porção</th>
+									<th>% VD (*)</th>
+
+								</tr>
+
+								</thead>
+
+								<tbody>
+
+								<tr>
+
+									<td>Valor Energético</td>
+									<td>110 kcal</td>
+									<td>7%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Carboidrato</td>
+									<td>28 g</td>
+									<td>9%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Sódio</td>
+									<td>5,6 g</td>
+									<td>7%</td>
+
+								</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="limao" class="ProductItem">
+
+			<div class="ProductItem-inner">
+
+				<div class="ProductItemBlur" style="background-image: url('img/limao-blur-bg.png')"></div>
+
+				<figure class="ProductItemImage">
+
+					<div class="ProductItemImage-wrapper">
+
+						<img src="img/limao-family.png" alt=""/>
+
+					</div>
+
+				</figure>
+
+				<div class="ProductItemInfo grey-300 font-grey-800">
+
+					<div class="ProductItemInfo-inner">
+
+						<h3>Limão</h3>
+
+						<h4>Ingredientes</h4>
+
+						<ul class="ProductItemInfoIngredientList">
+
+							<li>Koolzuurhoudend Spa® mineraalwater 86,7% (bron Barisart)</li>
+							<li>Suiker</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+
+						</ul>
+
+						<h4>Informações nutricionais</h4>
+
+						<div class="ProductItemInfoNutrition">
+
+							<table>
+
+								<thead>
+
+								<tr>
+
+									<th colspan="2">Quantidade por Porção</th>
+									<th>% VD (*)</th>
+
+								</tr>
+
+								</thead>
+
+								<tbody>
+
+								<tr>
+
+									<td>Valor Energético</td>
+									<td>110 kcal</td>
+									<td>7%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Carboidrato</td>
+									<td>28 g</td>
+									<td>9%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Sódio</td>
+									<td>5,6 g</td>
+									<td>7%</td>
+
+								</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="taubaina" class="ProductItem">
+
+			<div class="ProductItem-inner">
+
+				<div class="ProductItemBlur" style="background-image: url('img/taubaina-blur-bg.png')"></div>
+
+				<figure class="ProductItemImage">
+
+					<div class="ProductItemImage-wrapper">
+
+						<img src="img/taubaina-family.png" alt=""/>
+
+					</div>
+
+				</figure>
+
+				<div class="ProductItemInfo grey-300 font-grey-800">
+
+					<div class="ProductItemInfo-inner">
+
+						<h3>Taubaina</h3>
+
+						<h4>Ingredientes</h4>
+
+						<ul class="ProductItemInfoIngredientList">
+
+							<li>Koolzuurhoudend Spa® mineraalwater 86,7% (bron Barisart)</li>
+							<li>Suiker</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+
+						</ul>
+
+						<h4>Informações nutricionais</h4>
+
+						<div class="ProductItemInfoNutrition">
+
+							<table>
+
+								<thead>
+
+								<tr>
+
+									<th colspan="2">Quantidade por Porção</th>
+									<th>% VD (*)</th>
+
+								</tr>
+
+								</thead>
+
+								<tbody>
+
+								<tr>
+
+									<td>Valor Energético</td>
+									<td>110 kcal</td>
+									<td>7%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Carboidrato</td>
+									<td>28 g</td>
+									<td>9%</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Sódio</td>
+									<td>5,6 g</td>
+									<td>7%</td>
+
+								</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="product-controls" class="ProductControls">
+
+			<div class="ProductControls-wrapper">
+
+				<button id="product-controls-previous" class="ProductControlsButton ProductControlsButton--arrows">
+
+					<span class="icon-angle-left"></span>
+
+				</button>
+
+				<button id="product-controls-close" class="ProductControlsButton ProductControlsButton--close">
+
+					<span class="icon-cancel"></span>
+
+				</button>
+
+				<button id="product-controls-next" class="ProductControlsButton ProductControlsButton--arrows">
+
+					<span class="icon-angle-right"></span>
+
+				</button>
+
+			</div>
+
+		</div>
 
 	</section>
 
@@ -303,6 +1404,10 @@
 	var ProductList = {};
 	ProductList.nav = {};
 	ProductList.nav.items = document.querySelectorAll('.ProductListItem');
+	ProductList.controls = document.getElementById('product-controls');
+	ProductList.controls.previous = document.getElementById('product-controls-previous');
+	ProductList.controls.close = document.getElementById('product-controls-close');
+	ProductList.controls.next = document.getElementById('product-controls-next');
 
 	ProductList.items = document.querySelectorAll('.ProductItem');
 
@@ -311,8 +1416,16 @@
 		for (var i = ProductList.items.length; i--; )
 			ProductList.items[i].classList.remove('is-active');
 
-		if (item)
+		if (item) {
+
 			item.classList.add('is-active');
+			ProductList.controls.classList.add('is-active');
+
+		} else {
+
+			ProductList.controls.classList.remove('is-active');
+
+		}
 
 	};
 
@@ -334,6 +1447,82 @@
 
 	for (var i = ProductList.items.length; i--; )
 		ProductList.items[i].addEventListener('click', ProductList.onItemClick);
+
+	ProductList.controls.close.addEventListener('click', function () {
+
+		ProductList.resetItems(false);
+
+	});
+
+	ProductList.getPrevious = function () {
+
+		var previous = false;
+
+		for (var i = ProductList.items.length; i--; )
+			if (ProductList.items[i].classList.contains('is-active')) {
+
+				if (i == 0)
+					previous = ProductList.items[ProductList.items.length - 1];
+				else
+					previous = ProductList.items[i - 1];
+
+			}
+
+		ProductList.resetItems(previous);
+
+	};
+
+	ProductList.getNext = function () {
+
+		var next = false;
+
+		for (var i = 0; i < ProductList.items.length; i++)
+			if (ProductList.items[i].classList.contains('is-active')) {
+
+				if (i == ProductList.items.length - 1)
+					next = ProductList.items[0];
+				else
+					next = ProductList.items[i + 1];
+
+			}
+
+		ProductList.resetItems(next);
+
+	};
+
+	ProductList.controls.previous.addEventListener('click', ProductList.getPrevious);
+
+	ProductList.controls.next.addEventListener('click', ProductList.getNext);
+
+	ProductList.isActive = function () {
+
+		for (var i = ProductList.items.length; i--; )
+			if (ProductList.items[i].classList.contains('is-active'))
+				return ProductList.items[i];
+
+		return false;
+
+	};
+
+	// keydown listeners
+	window.addEventListener('keydown', function (event) {
+
+		// esc event
+		if (event.keyCode == 27)
+			if (ProductList.isActive())
+				ProductList.resetItems(false);
+
+		// arrow left
+		if (event.keyCode == 37)
+			if (ProductList.isActive())
+				ProductList.getPrevious();
+
+		// arrow right
+		if (event.keyCode == 39)
+			if (ProductList.isActive())
+				ProductList.getNext();
+
+	});
 
 </script>
 

@@ -1,0 +1,97 @@
+
+/* Gallery Item */
+
+.GalleryItem {
+	height: 100%;
+	left: 0;
+	position: relative;
+	top: 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+/* Gallery Item background and inner */
+
+.GalleryItem-background,
+.GalleryItem-inner {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/* Gallery Item background */
+
+.GalleryItem-background {
+	background: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.GalleryItem--wave .GalleryItem-background {
+	background-image: url("../img/Hero_Wave-background.jpg");
+}
+
+/* Gallery Item inner */
+
+.GalleryItem-inner {
+	padding: 0 1em;
+	z-index: 1;
+}
+
+/* Gallery Item inner img */
+
+.GalleryItem--wave .GalleryItem-inner img {
+	display: block;
+	max-height: 21em;
+	bottom: -1em;
+	position: absolute;
+}
+
+/* Gallery Item container */
+
+.GalleryItem-container {
+	margin: 0 auto;
+	height: 100%;
+	max-width: 72em;
+	width: 100%;
+}
+
+@media (min-width: 48em) {
+
+	/* Gallery Item inner */
+
+	.GalleryItem-inner {
+		padding: 0 1.5em;
+	}
+
+	/* Gallery Item inner img */
+
+	.GalleryItem--wave .GalleryItem-inner img {
+		max-height: 36em;
+	}
+
+}
+
+@media (min-width: 60em) {
+
+	/* Gallery Item inner img */
+
+	.GalleryItem--wave .GalleryItem-inner img {
+		max-height: 30em;
+	}
+
+}
+
+@media (min-width: 96em) {
+
+	/* Gallery Item inner img */
+
+	.GalleryItem--wave .GalleryItem-inner img {
+		max-height: 42em;
+	}
+
+}
