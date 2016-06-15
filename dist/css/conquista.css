@@ -2577,15 +2577,204 @@
 }
 
 /* '' */
-/* Gallery Item */
+/* Contact */
 
-.GalleryItem {
+.Contact {
+  position: relative;
+}
+
+.Contact-inner {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
   height: 100%;
   left: 0;
+  padding: 4.5em 1em 3em;
   position: relative;
   top: 0;
   width: 100%;
+  text-align: center;
+}
+
+.Contact h2 {
+  font-size: 4.5em;
+  font-weight: 900;
+  letter-spacing: -1.5pt;
+  margin-bottom: 1em;
+  z-index: 1;
+}
+
+.Contact p {
+  font-size: 1.3125em;
+  font-weight: 500;
+  margin-bottom: 1.5em;
+  max-width: 40em;
+  z-index: 1;
+}
+
+.Contact img {
+  margin: 1em auto;
+  max-width: 48em;
+  width: 100%;
+}
+
+.ContactForm {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  max-width: 48em;
+  width: 100%;
+}
+
+.FormField {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-weight: 900;
+  padding: 1em;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.FormField--submit {
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.FormField input,
+.FormField textarea {
+  color: #009688;
+  background: transparent;
+  border: solid 3px #009688;
+  font-size: 1.125em;
+  padding: .75em 1em;
+  width: 100%;
+}
+
+.FormField button {
+  background: transparent;
+  border: solid 3px #009688;
+  cursor: pointer;
+  color: #009688;
+  height: 2.25em;
+  font-size: 1.125em;
+  font-weight: 900;
+  padding: 0 1em;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.FormField button:hover {
+  background-color: #009688;
+  color: #ffffff;
+  height: 2.25em;
+  font-size: 1.125em;
+  padding: 0 1em;
+}
+
+@media (min-width: 48em) {
+  .FormField {
+    width: 50%;
+  }
+
+  .FormField--full,
+  .FormField--submit {
+    width: 100%;
+  }
+}
+/* Footer */
+
+.Footer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  padding: 8em 1em 1em;
+  position: relative;
+  width: 100%;
+}
+
+.Footer-logo {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 1em 1em 2.25em;
+}
+
+.Footer img {
+  max-height: 4.5em;
+  height: 100%;
+}
+
+.Footer p {
+  text-align: center;
+  font-size: 1.125em;
+  margin-bottom: 1em;
+}
+
+.SiteMap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.SiteMapSection {
+  width: 100%;
+}
+
+@media (min-width: 48em) {
+  .Footer img {
+    max-height: 6em;
+  }
+}
+/* Gallery Item */
+
+.GalleryItem {
+  cursor: pointer;
+  height: 100%;
+  left: -100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
   overflow: hidden;
+  -webkit-transition: left .6s;
+  -moz-transition: left .6s;
+  -ms-transition: left .6s;
+  -o-transition: left .6s;
+  transition: left .6s;
+}
+
+.GalleryItem.is-active {
+  left: 0;
 }
 
 /* Gallery Item background and inner */
@@ -2609,8 +2798,12 @@
   background-size: cover;
 }
 
+.GalleryItem--family .GalleryItem-background {
+  background-image: url("../img/Hero-background/Hero_Family-background.jpg");
+}
+
 .GalleryItem--wave .GalleryItem-background {
-  background-image: url("../img/Hero_Wave-background.jpg");
+  background-image: url("../img/Hero-background/Hero_Wave-background.jpg");
 }
 
 /* Gallery Item inner */
@@ -2622,11 +2815,17 @@
 
 /* Gallery Item inner img */
 
+.GalleryItem--family .GalleryItem-inner img,
 .GalleryItem--wave .GalleryItem-inner img {
   display: block;
   max-height: 21em;
   bottom: -1em;
+  height: 100%;
   position: absolute;
+}
+
+.GalleryItem--family .GalleryItem-inner img {
+  bottom: -4.5em;
 }
 
 /* Gallery Item container */
@@ -2638,6 +2837,10 @@
   width: 100%;
 }
 
+.GalleryItem--intro .GalleryItem-container {
+  padding: 10em 2.25em 1em;
+}
+
 @media (min-width: 48em) {
   /* Gallery Item inner */
 
@@ -2647,24 +2850,58 @@
 
   /* Gallery Item inner img */
 
+  .GalleryItem--family .GalleryItem-inner img,
   .GalleryItem--wave .GalleryItem-inner img {
     max-height: 36em;
+  }
+
+  /* Gallery Item container */
+
+  .GalleryItem--intro .GalleryItem-container {
+    padding: 12em 2.25em 1em;
   }
 }
 
 @media (min-width: 60em) {
+  .GalleryItem--intro h3 {
+    font-size: 3.75em;
+    margin-bottom: .375em;
+  }
+
+  .GalleryItem--intro p {
+    font-size: 1.3125em;
+    margin-bottom: .5em;
+    max-width: 36em;
+  }
+
   /* Gallery Item inner img */
 
+  .GalleryItem--family .GalleryItem-inner img,
   .GalleryItem--wave .GalleryItem-inner img {
     max-height: 30em;
   }
 }
 
 @media (min-width: 96em) {
+  .GalleryItem--intro h3 {
+    font-size: 4.5em;
+  }
+
+  .GalleryItem--intro p {
+    font-size: 1.5em;
+  }
+
   /* Gallery Item inner img */
 
+  .GalleryItem--family .GalleryItem-inner img,
   .GalleryItem--wave .GalleryItem-inner img {
     max-height: 42em;
+  }
+
+  /* Gallery Item container */
+
+  .GalleryItem--intro .GalleryItem-container {
+    padding: 16em 2.25em 1em;
   }
 }
 /* Gallery */
@@ -2746,6 +2983,52 @@
   left: 0;
   position: absolute;
   top: 0;
+  width: 100%;
+}
+/* Local */
+
+.Local {
+  position: relative;
+}
+
+.Local-inner {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  height: 100%;
+  left: 0;
+  padding: 4.5em 1em 3em;
+  position: relative;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.Local h2 {
+  font-size: 4.5em;
+  font-weight: 900;
+  letter-spacing: -1.5pt;
+  margin-bottom: 1em;
+  z-index: 1;
+}
+
+.Local p {
+  font-size: 1.3125em;
+  font-weight: 500;
+  margin-bottom: 1.5em;
+  max-width: 40em;
+  z-index: 1;
+}
+
+.Local img {
+  margin: 1em auto;
+  max-width: 48em;
   width: 100%;
 }
 /* Logo */
@@ -3106,7 +3389,7 @@ main {
   }
 
   .ProductsAbout-background {
-    background: url("../img/Unsplash_Wave.jpg") no-repeat 0%;
+    background: url("../img/Hero-background/Hero_Wave-background.jpg") no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -3423,6 +3706,7 @@ main {
 .ToggleButton {
   -webkit-align-items: center;
   align-items: center;
+  cursor: pointer;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;

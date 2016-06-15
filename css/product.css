@@ -46,7 +46,7 @@ main {
 	}
 
 	.ProductsAbout-background {
-		background: url("../img/Unsplash_Wave.jpg") no-repeat 0%;
+		background: url("../img/Hero-background/Hero_Wave-background.jpg") no-repeat center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;

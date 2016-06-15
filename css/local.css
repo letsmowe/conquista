@@ -1,0 +1,47 @@
+
+/* Local */
+
+.Local {
+	position: relative;
+}
+
+.Local-inner {
+	-webkit-align-items: center;
+	align-items: center;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+	height: 100%;
+	left: 0;
+	padding: 4.5em 1em 3em;
+	position: relative;
+	top: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.Local h2 {
+	font-size: 4.5em;
+	font-weight: 900;
+	letter-spacing: -1.5pt;
+	margin-bottom: 1em;
+	z-index: 1;
+}
+
+.Local p {
+	font-size: 1.3125em;
+	font-weight: 500;
+	margin-bottom: 1.5em;
+	max-width: 40em;
+	z-index: 1;
+}
+
+.Local img {
+	margin: 1em auto;
+	max-width: 48em;
+	width: 100%;
+}

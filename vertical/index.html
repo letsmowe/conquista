@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="open-sans">
 <meta charset="UTF-8">
-<title>Bebidas Conquista | Protótipo horizontal</title>
+<title>Bebidas Conquista | Protótipo vertical</title>
 <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 <script src="../dist/js/villa.min.js"></script>
@@ -35,7 +35,8 @@
 
 	main {
 		display: block;
-		height: 100vh;
+		height: 100%;
+		position: relative;
 		width: 100%;
 	}
 
@@ -91,7 +92,7 @@
 
 					<a href="#" class="MenuItem-select-area">
 
-						<div class="MenuItem-text">Como chegar</div>
+						<div class="MenuItem-text">Contato</div>
 
 					</a>
 
@@ -156,6 +157,26 @@
 
 	<div class="Gallery">
 
+		<div class="GalleryItem GalleryItem--intro font-white">
+
+			<div class="GalleryItem-background"></div>
+
+			<div class="GalleryItem-inner">
+
+				<div class="GalleryItem-container">
+
+					<h3>Olá, Conquista! :)</h3>
+
+					<p>Este é um protótipo criado pela Kabana's Mowe, uma empresa de desenvolvimento web criada em 2015 em Palmital.</p>
+					<p>Neste protótipo, vocês podem interagir com os módulos que deverão estar no site final, é importante que utilizem e testem o módulo de apresentação de produtos.</p>
+					<p>Clique <strong>aqui</strong> para trocar o slide.</p>
+
+				</div>
+
+			</div>
+
+		</div>
+
 		<div class="GalleryItem GalleryItem--wave">
 
 			<div class="GalleryItem-background"></div>
@@ -164,7 +185,7 @@
 
 				<div class="GalleryItem-container">
 
-					<img src="../dist/img/Hero_Wave-target.png" alt=""/>
+					<img src="../dist/img/Hero-target/Hero_Wave-target.png" alt=""/>
 
 				</div>
 
@@ -177,7 +198,14 @@
 			<div class="GalleryItem-background"></div>
 
 			<div class="GalleryItem-inner">
-				
+
+				<div class="GalleryItem-container">
+
+					<img src="../dist/img/Hero-target/Hero_Family-target.png" alt=""/>
+
+				</div>
+
+
 			</div>
 
 		</div>
@@ -206,7 +234,7 @@
 
 				<figure>
 
-					<img src="../dist/img/Family-pet.png" alt=""/>
+					<img src="../dist/img/misc/Family-pet.png" alt=""/>
 
 				</figure>
 
@@ -221,8 +249,8 @@
 			<div class="ProductListItem deep-orange-400" data-target-id="guarana">
 
 				<div class="ProductListItem-background"></div>
-				<div class="ProductListItem-target" style="background-image: url('../dist/img/guarana-fruit.png')"></div>
-				<div class="ProductListItem-product" style="background-image: url('../dist/img/guarana-pet.png')"></div>
+				<div class="ProductListItem-target" style="background-image: url('../dist/img/Product-target/guarana-fruit.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('../dist/img/Product-pet/guarana-pet.png')"></div>
 
 				<div class="ProductListItemTitle font-white">
 
@@ -237,8 +265,8 @@
 			<div class="ProductListItem amber-300" data-target-id="abacaxi">
 
 				<div class="ProductListItem-background"></div>
-				<div class="ProductListItem-target" style="background-image: url('../dist/img/abacaxi-fruit.png')"></div>
-				<div class="ProductListItem-product" style="background-image: url('../dist/img/abacaxi-pet.png')"></div>
+				<div class="ProductListItem-target" style="background-image: url('../dist/img/Product-target/abacaxi-fruit.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('../dist/img/Product-pet/abacaxi-pet.png')"></div>
 
 				<div class="ProductListItemTitle font-white">
 
@@ -253,8 +281,8 @@
 			<div class="ProductListItem light-green-400" data-target-id="citrus">
 
 				<div class="ProductListItem-background"></div>
-				<div class="ProductListItem-target" style="background-image: url('../dist/img/citrus-fruit.png')"></div>
-				<div class="ProductListItem-product" style="background-image: url('../dist/img/citrus-pet.png')"></div>
+				<div class="ProductListItem-target" style="background-image: url('../dist/img/Product-target/citrus-fruit.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('../dist/img/Product-pet/citrus-pet.png')"></div>
 
 				<div class="ProductListItemTitle font-white">
 
@@ -269,8 +297,8 @@
 			<div class="ProductListItem purple-200" data-target-id="uva">
 
 				<div class="ProductListItem-background"></div>
-				<div class="ProductListItem-target" style="background-image: url('../dist/img/uva-fruit.png')"></div>
-				<div class="ProductListItem-product" style="background-image: url('../dist/img/uva-pet.png')"></div>
+				<div class="ProductListItem-target" style="background-image: url('../dist/img/Product-target/uva-fruit.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('../dist/img/Product-pet/uva-pet.png')"></div>
 
 				<div class="ProductListItemTitle font-white">
 
@@ -285,8 +313,8 @@
 			<div class="ProductListItem orange-300" data-target-id="laranja">
 
 				<div class="ProductListItem-background"></div>
-				<div class="ProductListItem-target" style="background-image: url('../dist/img/laranja-fruit.png')"></div>
-				<div class="ProductListItem-product" style="background-image: url('../dist/img/laranja-pet.png')"></div>
+				<div class="ProductListItem-target" style="background-image: url('../dist/img/Product-target/laranja-fruit.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('../dist/img/Product-pet/laranja-pet.png')"></div>
 
 				<div class="ProductListItemTitle font-white">
 
@@ -301,8 +329,8 @@
 			<div class="ProductListItem red-700" data-target-id="cola">
 
 				<div class="ProductListItem-background"></div>
-				<div class="ProductListItem-target" style="background-image: url('../dist/img/cola-splash.png')"></div>
-				<div class="ProductListItem-product" style="background-image: url('../dist/img/cola-pet.png')"></div>
+				<div class="ProductListItem-target" style="background-image: url('../dist/img/Product-target/cola-splash.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('../dist/img/Product-pet/cola-pet.png')"></div>
 
 				<div class="ProductListItemTitle font-white">
 
@@ -317,8 +345,8 @@
 			<div class="ProductListItem green-600" data-target-id="mix">
 
 				<div class="ProductListItem-background"></div>
-				<div class="ProductListItem-target" style="background-image: url('../dist/img/mix-splash-lemon.png')"></div>
-				<div class="ProductListItem-product" style="background-image: url('../dist/img/mix-pet.png')"></div>
+				<div class="ProductListItem-target" style="background-image: url('../dist/img/Product-target/mix-splash-lemon.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('../dist/img/Product-pet/mix-pet.png')"></div>
 
 				<div class="ProductListItemTitle font-white">
 
@@ -333,8 +361,8 @@
 			<div class="ProductListItem light-green-300" data-target-id="limao">
 
 				<div class="ProductListItem-background"></div>
-				<div class="ProductListItem-target" style="background-image: url('../dist/img/limao-fruit.png')"></div>
-				<div class="ProductListItem-product" style="background-image: url('../dist/img/limao-pet.png')"></div>
+				<div class="ProductListItem-target" style="background-image: url('../dist/img/Product-target/limao-fruit.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('../dist/img/Product-pet/limao-pet.png')"></div>
 
 				<div class="ProductListItemTitle font-white">
 
@@ -349,8 +377,8 @@
 			<div class="ProductListItem deep-purple-200" data-target-id="taubaina">
 
 				<div class="ProductListItem-background"></div>
-				<div class="ProductListItem-target" style="background-image: url('../dist/img/taubaina-fruits.png')"></div>
-				<div class="ProductListItem-product" style="background-image: url('../dist/img/taubaina-pet.png')"></div>
+				<div class="ProductListItem-target" style="background-image: url('../dist/img/Product-target/taubaina-fruits.png')"></div>
+				<div class="ProductListItem-product" style="background-image: url('../dist/img/Product-pet/taubaina-pet.png')"></div>
 
 				<div class="ProductListItemTitle font-white">
 
@@ -368,13 +396,13 @@
 
 			<div class="ProductItem-inner">
 
-				<div class="ProductItemBlur" style="background-image: url('../dist/img/guarana-blur-bg.png')"></div>
+				<div class="ProductItemBlur" style="background-image: url('../dist/img/Product-blur/guarana-blur-bg.png')"></div>
 
 				<figure class="ProductItemImage">
 
 					<div class="ProductItemImage-wrapper">
 
-						<img src="../dist/img/guarana-family.png" alt=""/>
+						<img src="../dist/img/Product-family/guarana-family.png" alt=""/>
 
 					</div>
 
@@ -460,13 +488,13 @@
 
 			<div class="ProductItem-inner">
 
-				<div class="ProductItemBlur" style="background-image: url('../dist/img/abacaxi-blur-bg.png')"></div>
+				<div class="ProductItemBlur" style="background-image: url('../dist/img/Product-blur/abacaxi-blur-bg.png')"></div>
 
 				<figure class="ProductItemImage">
 
 					<div class="ProductItemImage-wrapper">
 
-						<img src="../dist/img/abacaxi-pet.png" alt=""/>
+						<img src="../dist/img/Product-pet/abacaxi-pet.png" alt=""/>
 
 					</div>
 
@@ -552,13 +580,13 @@
 
 			<div class="ProductItem-inner">
 
-				<div class="ProductItemBlur" style="background-image: url('../dist/img/citrus-blur-bg.png')"></div>
+				<div class="ProductItemBlur" style="background-image: url('../dist/img/Product-blur/citrus-blur-bg.png')"></div>
 
 				<figure class="ProductItemImage">
 
 					<div class="ProductItemImage-wrapper">
 
-						<img src="../dist/img/citrus-pet.png" alt=""/>
+						<img src="../dist/img/Product-pet/citrus-pet.png" alt=""/>
 
 					</div>
 
@@ -644,13 +672,13 @@
 
 			<div class="ProductItem-inner">
 
-				<div class="ProductItemBlur" style="background-image: url('../dist/img/uva-blur-bg.png')"></div>
+				<div class="ProductItemBlur" style="background-image: url('../dist/img/Product-blur/uva-blur-bg.png')"></div>
 
 				<figure class="ProductItemImage">
 
 					<div class="ProductItemImage-wrapper">
 
-						<img src="../dist/img/uva-pet.png" alt=""/>
+						<img src="../dist/img/Product-pet/uva-pet.png" alt=""/>
 
 					</div>
 
@@ -736,13 +764,13 @@
 
 			<div class="ProductItem-inner">
 
-				<div class="ProductItemBlur" style="background-image: url('../dist/img/laranja-blur-bg.png')"></div>
+				<div class="ProductItemBlur" style="background-image: url('../dist/img/Product-blur/laranja-blur-bg.png')"></div>
 
 				<figure class="ProductItemImage">
 
 					<div class="ProductItemImage-wrapper">
 
-						<img src="../dist/img/laranja-family.png" alt=""/>
+						<img src="../dist/img/Product-family/laranja-family.png" alt=""/>
 
 					</div>
 
@@ -828,13 +856,13 @@
 
 			<div class="ProductItem-inner">
 
-				<div class="ProductItemBlur" style="background-image: url('../dist/img/cola-blur-bg.png')"></div>
+				<div class="ProductItemBlur" style="background-image: url('../dist/img/Product-blur/cola-blur-bg.png')"></div>
 
 				<figure class="ProductItemImage">
 
 					<div class="ProductItemImage-wrapper">
 
-						<img src="../dist/img/cola-family.png" alt=""/>
+						<img src="../dist/img/Product-family/cola-family.png" alt=""/>
 
 					</div>
 
@@ -920,13 +948,13 @@
 
 			<div class="ProductItem-inner">
 
-				<div class="ProductItemBlur" style="background-image: url('../dist/img/mix-blur-bg.png')"></div>
+				<div class="ProductItemBlur" style="background-image: url('../dist/img/Product-blur/mix-blur-bg.png')"></div>
 
 				<figure class="ProductItemImage">
 
 					<div class="ProductItemImage-wrapper">
 
-						<img src="../dist/img/mix-family.png" alt=""/>
+						<img src="../dist/img/Product-family/mix-family.png" alt=""/>
 
 					</div>
 
@@ -1012,13 +1040,13 @@
 
 			<div class="ProductItem-inner">
 
-				<div class="ProductItemBlur" style="background-image: url('../dist/img/limao-blur-bg.png')"></div>
+				<div class="ProductItemBlur" style="background-image: url('../dist/img/Product-blur/limao-blur-bg.png')"></div>
 
 				<figure class="ProductItemImage">
 
 					<div class="ProductItemImage-wrapper">
 
-						<img src="../dist/img/limao-family.png" alt=""/>
+						<img src="../dist/img/Product-family/limao-family.png" alt=""/>
 
 					</div>
 
@@ -1104,13 +1132,13 @@
 
 			<div class="ProductItem-inner">
 
-				<div class="ProductItemBlur" style="background-image: url('../dist/img/taubaina-blur-bg.png')"></div>
+				<div class="ProductItemBlur" style="background-image: url('../dist/img/Product-blur/taubaina-blur-bg.png')"></div>
 
 				<figure class="ProductItemImage">
 
 					<div class="ProductItemImage-wrapper">
 
-						<img src="../dist/img/taubaina-family.png" alt=""/>
+						<img src="../dist/img/Product-family/taubaina-family.png" alt=""/>
 
 					</div>
 
@@ -1220,7 +1248,108 @@
 
 	</section>
 
+	<section class="Local">
+
+		<div class="Local-inner light-blue-700">
+
+			<h2 class="font-white">Onde encontrar</h2>
+
+			<p class="font-white">Nesta seção nós apresentamos as cidades que possuem produtos conquista, tudo isso é administrado por uma área de segurança que poderá gerir sem interferência técnica de desenvolvedores.</p>
+
+			<img src="../dist/img/misc/map-tag.png" alt=""/>
+
+		</div>
+
+	</section>
+
+	<section class="Contact font-teal-400">
+
+		<div class="Contact-inner">
+
+			<h2 class="">Fale Conosco</h2>
+
+			<p class="">Esta seção é composta por um formulário de contato e formas alternativas de contato, assim como telefone, sac e endereço do escritório.</p>
+
+			<form class="ContactForm">
+
+				<div class="FormField">
+
+					<label></label>
+					<input placeholder="Nome" type="text"/>
+					
+				</div>
+
+				<div class="FormField">
+
+					<label></label>
+					<input placeholder="Cidade" type="text"/>
+
+				</div>
+
+				<div class="FormField">
+
+					<label></label>
+					<input placeholder="E-mail" type="text"/>
+
+				</div>
+
+				<div class="FormField">
+
+					<label></label>
+					<input placeholder="Telefone" type="text"/>
+
+				</div>
+
+				<div class="FormField FormField--full">
+
+					<label></label>
+					<textarea placeholder="Digite uma mensagem aqui" cols="20" rows="4"></textarea>
+
+				</div>
+
+				<div class="FormField FormField--submit">
+
+					<button>Enviar</button>
+
+				</div>
+
+			</form>
+
+		</div>
+
+	</section>
+
 </main>
+
+<footer class="Footer light-blue-700 font-white">
+
+	<div class="flex">
+
+		<div class="SiteMap">
+
+			<div class="SiteMapSession">
+
+				<p class="title"></p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<p>Conquista ® 2016 - Todos direitos reservados</p>
+
+	<div class="Footer-logo">
+
+		<img src="../dist/img/misc/ConquistaLogoOLD.png" alt=""/>
+
+	</div>
+
+</footer>
 
 <script src="../dist/js/conquista.js"></script>
 
@@ -1390,6 +1519,67 @@
 
 	for (var i = nav.items.length; i--; )
 		nav.items[i].addEventListener('click', nav.toggle);
+
+</script>
+
+<script>
+
+
+	/* Hero Gallery */
+
+	var gallery = {};
+
+	gallery.items = document.querySelectorAll('.GalleryItem');
+
+	gallery.reset = function () {
+
+		for (var i = gallery.items.length; i--; )
+			gallery.items[i].classList.remove('is-active');
+
+	};
+
+	gallery.getNext = function () {
+
+		for (var i = 0; i < gallery.items.length; i++)
+			if (gallery.items[i].classList.contains('is-active')) {
+
+				if ( ( i + 1 ) == gallery.items.length )
+					return gallery.items[0];
+				else
+					return gallery.items[i + 1];
+
+			}
+
+		return gallery.items[0] || false;
+
+	};
+
+	gallery.delay = false;
+
+	gallery.change = function () {
+
+		if (gallery.delay)
+			clearInterval(gallery.delay);
+
+		gallery.delay = setInterval(gallery.change, 6000);
+
+		var next = gallery.getNext();
+
+		if (next) {
+
+			gallery.reset();
+			next.classList.add('is-active');
+
+		}
+
+	};
+
+	for (var i = gallery.items.length; i--; )
+		gallery.items[i].addEventListener('click', gallery.change);
+
+	gallery.change();
+
+	gallery.delay = setInterval(gallery.change, 6000);
 
 </script>
 

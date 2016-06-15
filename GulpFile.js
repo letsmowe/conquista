@@ -119,22 +119,94 @@ gulp.task('js-watch', ['js'], function () {
 
 // IMAGES
 
-gulp.task('resizePhotos', function () {
-	gulp.src(source.images.location + source.images.content)
+gulp.task('resizeImgHeroBackground', function () {
+
+	var local = 'Hero-background/*';
+	var distLocal = 'Hero-background/';
+
+	gulp.src('./img/' + local)
 		.pipe(imageResize({
 			height : 960,
 			upscale : false
 		}))
-		.pipe(gulp.dest(dist.location + source.images.largePhotos.location));
+		.pipe(gulp.dest('./dist/img/' + distLocal));
+
 });
 
-gulp.task('tinyPhotosSource', function () {
-	if (tinypngToken)
-		gulp.src(source.images.location + source.images.content)
-			.pipe(tinypng(tinypngToken))
-			.pipe(gulp.dest(source.images.location));
-	else
-		console.log('TinyPNG Token Required');
+gulp.task('resizeImgHeroTarget', function () {
+
+	var local = 'Hero-target/*';
+	var distLocal = 'Hero-target/';
+
+	gulp.src('./img/' + local)
+		.pipe(gulp.dest('./dist/img/' + distLocal));
+
+});
+
+gulp.task('resizeImgMisc', function () {
+
+	var local = 'misc/*';
+	var distLocal = 'misc/';
+
+	gulp.src('./img/' + local)
+		.pipe(gulp.dest('./dist/img/' + distLocal));
+
+});
+
+gulp.task('resizeImgProductBlur', function () {
+
+	var local = 'Product-blur/*';
+	var distLocal = 'Product-blur/';
+
+	gulp.src('./img/' + local)
+		.pipe(imageResize({
+			height : 960,
+			upscale : false
+		}))
+		.pipe(gulp.dest('./dist/img/' + distLocal));
+
+});
+
+gulp.task('resizeImgProductFamily', function () {
+
+	var local = 'Product-family/*';
+	var distLocal = 'Product-family/';
+
+	gulp.src('./img/' + local)
+		.pipe(imageResize({
+			height : 768,
+			upscale : false
+		}))
+		.pipe(gulp.dest('./dist/img/' + distLocal));
+
+});
+
+gulp.task('resizeImgProductPet', function () {
+
+	var local = 'Product-pet/*';
+	var distLocal = 'Product-pet/';
+
+	gulp.src('./img/' + local)
+		.pipe(imageResize({
+			height : 768,
+			upscale : false
+		}))
+		.pipe(gulp.dest('./dist/img/' + distLocal));
+
+});
+
+gulp.task('resizeImgProductTarget', function () {
+
+	var local = 'Product-target/*';
+	var distLocal = 'Product-target/';
+
+	gulp.src('./img/' + local)
+		.pipe(imageResize({
+			height : 600,
+			upscale : false
+		}))
+		.pipe(gulp.dest('./dist/img/' + distLocal));
+
 });
 
 // SERVER
